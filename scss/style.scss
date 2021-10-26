@@ -8,47 +8,29 @@
     background-color: cadetblue;
 }
 // 加入判斷裝置的斷點
-// 超小裝置<576px
+// 超小裝置<576px max-width最大寬度
 @media screen and (max-width:576px){
-    #main{
-        width: 50px;
-        background-color: goldenrod;
-    }
+    @import '02Esmall.scss';
 }
-// 小裝置>=576px in-width(最小寬度 含等於)
+// 小裝置>=576px min-width(最小寬度 含等於)
 @media screen and (min-width:576px){
-    #main{
-        width: 70px;
-        background-color: green;
-    }
+    @import '03Small.scss';
 }
 //平板裝置>=768px
 @media screen and (min-width:768px){
-    #main{
-        width: 80%;
-        background-color: indigo;
-    }
+    @import '04Med.scss';
 }
 // 大平板裝置>=992px
 @media screen and(min-width:992px) {
-    #main{
-        width: 85%;
-        background-color: lightslategrey;
-    }
+   @import '05Large.scss';
 }
 // 螢幕裝置>=1200px
 @media screen and(min-width:1200px) {
-    #main{
-        width:90%;
-        background-color: magenta;
-    }
+    @import '06Xlarge.scss';
 }
     
 // 超大螢幕裝置>=1400px
 @media screen and(min-width:1400px) {
-    #main{
-        width:100%;
-        background-color: midnightblue;
-    }
+    @import '07Xxlarge.scss';
     
 }
