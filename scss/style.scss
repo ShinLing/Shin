@@ -2,14 +2,53 @@
 //  對應HTML5相同標籤或者呼叫ID(標籤自訂名稱-英文 數字和底線_:唯一):class(重複,共用樣式
 // css呼叫id:輸入#name
  header {
+     /* 寬度 高度 背景顏色 文字顏色 */
     width: 100%;
     
     background-color: cadetblue;
 }
-main{
-    /* 寬度 高度 背景顏色 文字顏色 */
-    width: 50%;
+// 加入判斷裝置的斷點
+// 超小裝置<576px
+@media screen and (max-width:576px){
+    #main{
+        width: 50px;
+        background-color: goldenrod;
+    }
+}
+// 小裝置>=576px in-width(最小寬度 含等於)
+@media screen and (min-width:576px){
+    #main{
+        width: 70px;
+        background-color: green;
+    }
+}
+//平板裝置>=768px
+@media screen and (min-width:768px){
+    #main{
+        width: 80%;
+        background-color: indigo;
+    }
+}
+// 大平板裝置>=992px
+@media screen and(min-width:992px) {
+    #main{
+        width: 85%;
+        background-color: lightslategrey;
+    }
+}
+// 螢幕裝置>=1200px
+@media screen and(min-width:1200px) {
+    #main{
+        width:90%;
+        background-color: magenta;
+    }
+}
     
-    background-color: darksalmon;
-    color: maroon;
+// 超大螢幕裝置>=1400px
+@media screen and(min-width:1400px) {
+    #main{
+        width:100%;
+        background-color: midnightblue;
+    }
+    
 }

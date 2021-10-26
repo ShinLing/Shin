@@ -1,13 +1,49 @@
 @charset "UTF-8";
 /* 樣式 */
 header {
+  /* 寬度 高度 背景顏色 文字顏色 */
   width: 100%;
   background-color: cadetblue;
 }
 
-main {
-  /* 寬度 高度 背景顏色 文字顏色 */
-  width: 50%;
-  background-color: darksalmon;
-  color: maroon;
+@media screen and (max-width: 576px) {
+  #main {
+    width: 50px;
+    background-color: goldenrod;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  #main {
+    width: 70px;
+    background-color: green;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #main {
+    width: 80%;
+    background-color: indigo;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #main {
+    width: 85%;
+    background-color: lightslategrey;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #main {
+    width: 90%;
+    background-color: magenta;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  #main {
+    width: 100%;
+    background-color: midnightblue;
+  }
 }
