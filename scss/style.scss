@@ -3,9 +3,7 @@
 // css呼叫id:輸入#name
  header {
      /* 寬度 高度 背景顏色 文字顏色 */
-    width: 100%;
-    
-    background-color: cadetblue;
+    @import '01Joint.scss';
 }
 // 加入判斷裝置的斷點
 // 超小裝置<576px max-width最大寬度

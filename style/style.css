@@ -2,8 +2,11 @@
 /* 樣式 */
 header {
   /* 寬度 高度 背景顏色 文字顏色 */
-  width: 100%;
-  background-color: cadetblue;
+}
+
+header * {
+  margin: 0 auto;
+  padding: 0;
 }
 
 @media screen and (max-width: 576px) {
