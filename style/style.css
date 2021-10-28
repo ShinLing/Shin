@@ -9,8 +9,21 @@ header * {
 }
 
 @media screen and (max-width: 576px) {
-  header nav #Portfolio, header nav #About, header nav #Project, header nav #Connection, footer nav {
+  header nav #Portfolio, header nav #About, header nav #Project, header nav #Connection {
     display: none;
+  }
+  footer nav #pohotoshop作品, footer nav #illustrator作品, footer nav #水彩作品 {
+    width: 50%;
+    color: white;
+  }
+  footer nav #pohotoshop作品 {
+    background-color: bisque;
+  }
+  footer nav #illustrator作品 {
+    background-color: aquamarine;
+  }
+  footer nav #水彩作品 {
+    background-color: cadetblue;
   }
 }
 
