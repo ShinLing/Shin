@@ -17,3 +17,19 @@ header{
        }
      }
 }
+footer {
+  nav {
+    #pohotoshop作品 {
+      @extend %subnav;
+      background-color: bisque;
+    }
+    #illustrator作品 {
+      @extend %subnav;
+      background-color: aquamarine;
+    }
+    #水彩作品 {
+      @extend %subnav;
+      background-color: cadetblue;
+    }
+  }
+}

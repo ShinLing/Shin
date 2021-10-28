@@ -6,13 +6,11 @@ header {
 
 header * {
   margin: 0 auto;
-  padding: 0;
 }
 
 @media screen and (max-width: 576px) {
-  #main {
-    width: 50px;
-    background-color: goldenrod;
+  header nav #Portfolio, header nav #About, header nav #Project, header nav #Connection, footer nav {
+    display: none;
   }
 }
 

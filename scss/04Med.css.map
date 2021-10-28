@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAA;EACD,KAAK,EAAE,GAAG;EACV,gBAAgB,EAAE,MAAM;CAC3B",
-    "sources": [
-        "04Med.scss"
-    ],
-    "names": [],
-    "file": "04Med.css"
-}

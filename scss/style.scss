@@ -3,32 +3,32 @@
 // css呼叫id:輸入#name
  header {
      /* 寬度 高度 背景顏色 文字顏色 */
-    @import '01Joint.scss';
+    @import '_01Joint.scss';
 }
 // 加入判斷裝置的斷點
 // 超小裝置<576px max-width最大寬度
 @media screen and (max-width:576px){
-    @import '02Esmall.scss';
+    @import '_02Esmall.scss';
 }
 // 小裝置>=576px min-width(最小寬度 含等於)
 @media screen and (min-width:576px){
-    @import '03Small.scss';
+    @import '_03Small.scss';
 }
 //平板裝置>=768px
 @media screen and (min-width:768px){
-    @import '04Med.scss';
+    @import '_04Med.scss';
 }
 // 大平板裝置>=992px
 @media screen and(min-width:992px) {
-   @import '05Large.scss';
+   @import '_05Large.scss';
 }
 // 螢幕裝置>=1200px
 @media screen and(min-width:1200px) {
-    @import '06Xlarge.scss';
+    @import '_06Xlarge.scss';
 }
     
 // 超大螢幕裝置>=1400px
 @media screen and(min-width:1400px) {
-    @import '07Xxlarge.scss';
+    @import '_07Xxlarge.scss';
     
 }
