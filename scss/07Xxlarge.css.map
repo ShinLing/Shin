@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAA;EACD,KAAK,EAAC,IAAI;EACV,gBAAgB,EAAE,YAAY;CACjC",
+    "sources": [
+        "07Xxlarge.scss"
+    ],
+    "names": [],
+    "file": "07Xxlarge.css"
+}
