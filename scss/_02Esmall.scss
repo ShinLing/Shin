@@ -31,12 +31,12 @@ width:  $NW;
       // 商標
       #Logo{
         // 寬度8等份
-        $W8:$W10 / 10 * 8;
+        width: $W1 * 8 + 5%;
       }
       // 選單
       #Mene{
         // 寬度2等份
-        $W2:$W10 / 10 * 2;
+        width: $W1 + 5%;
       }
 .clear{
    clear:both;
