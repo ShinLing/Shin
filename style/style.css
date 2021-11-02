@@ -1,11 +1,13 @@
 @charset "UTF-8";
 /* 樣式 */
-header {
+
   /* 寬度 高度 背景顏色 文字顏色 */
-}
+
 
 header * {
   margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
 }
 
 @media screen and (max-width: 576px) {
