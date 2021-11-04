@@ -42,9 +42,13 @@ header{
         line-height:  $Trem * ( 2 + 3 ); 
       }
       // 選單
-      #Mene{
-        // 寬度2等份
+      #Menu{
+        // 寬度 1.5 等份
         width: $W1 + 5%;
+        img {
+          width: 80px;
+          background-color: aquamarine;
+        }
       }
 .clear{
    clear:both;
