@@ -55,8 +55,9 @@ header{
         // 背景圖片對齊(定位點)
         background-position: center;
         // 背景圖片取消重覆顯示
-        
-       background-color: cadetblue;
+        background-repeat:  no-repeat;
+        // 背景圖片尺寸 auto自動 cover符合框架的尺寸
+        background-size: cover;
       }
 
       .clear{
