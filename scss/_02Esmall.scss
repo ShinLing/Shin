@@ -48,7 +48,10 @@ header{
         // 文字水平(行距).垂直(文字對齊--置中)置中
         text-align: center;
         line-height: 80px;
+        background-image: url(../imgs/icon/0001.svg);
+       background-color: cadetblue;
       }
+
 .clear{
    clear:both;
 }
