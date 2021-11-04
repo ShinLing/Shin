@@ -1,13 +1,14 @@
 header{
-    nav{
+  nav{
     // 屬於nav寬度 %;高度 px; 背景色(暫)
     width: $NW;
     height: $NH;
-
+    
     // 導覽列:只顯示Logo和Mene,其餘不顯示
-      // css3集合寫法,將共同的樣式一同編輯
-      #Portfolio, #About, #Project, #Connection {
-        @extend %Dn;
-       }
+    // css3集合寫法,將共同的樣式一同編輯
+    #Portfolio, #About, #Project, #Connection {
+        // @extend %Dn;
     }
+  }
 }
+    
