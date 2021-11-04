@@ -8,26 +8,20 @@ margin: 0 auto;
 padding: 0;
 // 隱藏所有項目符號
 list-style-type: none;
+}
 
 // 變數區
 $W10: 100%;
+$Trem: 1rem;
 
-$NW: $W10;
+$NW: 100%;
 // 導覽列的寬
 $NH: 65px;
 // 導覽列的高
 
 // 計算寬度,分為10等份
-
+$W1:$W10 / 10 * 1;
 $W2:$W10 / 10 * 2;
 $W7:$W10 / 10 * 7;
 $W8:$W10 / 10 * 8;
 $W9:$W10 / 10 * 9;
-
-
-// 導覽列:只顯示Logo和Mene,其餘不顯示
-      // css3集合寫法,將共同的樣式一同編輯
-      #Portfolio, #About, #Project, #Connection {
-        @extend %Dn;
-       }
-}

@@ -1,10 +1,7 @@
  /* 樣式 */
 //  對應HTML5相同標籤或者呼叫ID(標籤自訂名稱-英文 數字和底線_:唯一):class(重複,共用樣式
 // css呼叫id:輸入#name
- header {
-     /* 寬度 高度 背景顏色 文字顏色 */
-    @import '_01Joint.scss';
-}
+ @import '_01Joint.scss';
 // 加入判斷裝置的斷點
 // 超小裝置<576px max-width最大寬度
 @media screen and (max-width:576px){
