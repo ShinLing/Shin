@@ -18,8 +18,9 @@ display: none;
 
 header{
      nav{
+      //  設定nav專用(區域)變數;vh單位(以裝置的高度*百分比計算,同時顯示框架的高度值)
       //  屬於 nav 寬度% ;高度 px ;背景色(暫)
-      width: $NW;
+      $NH: 7vh;
       height: $NH;
       background-color: lightpink;
 
@@ -40,7 +41,7 @@ header{
         // 文字水平置中,行距設定(父框架的高度=行距的數值) line-height: 80 * 0.15 +px;
         // 方法1 父框架有高度時,父框架的高度 = 行距的數值 ;方法2 文字尺寸倍數 + 3 
         // 5rem = 80px
-        line-height:  $NH;
+        line-height: $NH;
         background-color: lightsalmon;
       }
       // 選單
@@ -49,7 +50,7 @@ header{
         width: $W1 + 5%;
         // 文字水平(行距).垂直(文字對齊--置中)置中
         text-align: center;
-        line-height: 80px $NW;
+        line-height: $NH;
         // 將文字移至裝置之外
         text-indent: -999999px;
         // 背景圖片連結
@@ -77,6 +78,29 @@ header{
     width: $W10;
     height: 280px;
     background-color: cadetblue;
+    ul {
+      width: $W10 * 5;
+      height: $BHsmall
+    li{
+      width: $W10;
+      height: $BHsmall;
+      float: left;
+    }
+    .Box1{
+      background-color: aliceblue
+    }
+    .Box2{
+      background-color: aqua
+    }
+    .Box3{
+      background-color: blueviolet
+    }
+    .Box4{
+      background-color: brown
+    }
+    .Box5{
+      background-color: coral
+    }
     }
 }
 footer {
