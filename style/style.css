@@ -42,6 +42,11 @@
   header nav .clear {
     clear: both;
   }
+  header #Bannerbox {
+    width: 100%;
+    height: 280px;
+    background-color: cadetblue;
+  }
   footer nav #pohotoshop作品 {
     background-color: bisque;
   }

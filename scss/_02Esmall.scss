@@ -72,6 +72,12 @@ header{
         @extend %Dn;
        }
      }
+    //  輪播圖片 超小與小裝置  100% X 375px
+    #Bannerbox {
+    width: $W10;
+    height: 280px;
+    background-color: cadetblue;
+    }
 }
 footer {
   nav {
