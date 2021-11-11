@@ -41,8 +41,19 @@ header{
         // 文字水平置中,行距設定(父框架的高度=行距的數值) line-height: 80 * 0.15 +px;
         // 方法1 父框架有高度時,父框架的高度 = 行距的數值 ;方法2 文字尺寸倍數 + 3 
         // 5rem = 80px
+        text-align: center;
         line-height: $NH;
-        background-color: lightsalmon;
+        // 自行輸入所需的值
+        @include BgText(contain);
+        // 背景圖片連結
+        background-image: url(../imgs/icon/0001.png);
+      }
+
+      // 導覽列:只顯示Logo和Mene,其餘不顯示
+      // css3集合寫法,將共同的樣式一同編輯
+      #portfolio, #About, #Project, #Contact {
+        // 呼叫 @mixin
+        @include DN;
       }
       // 選單
       #Menu{
@@ -67,8 +78,7 @@ header{
         clear:both;
       }
 
-      // 導覽列:只顯示Logo和Mene,其餘不顯示
-      // css3集合寫法,將共同的樣式一同編輯
+      
       #Portfolio, #About, #Project, #Connection {
         @extend %Dn;
        }
@@ -76,38 +86,38 @@ header{
     //  輪播圖片 超小與小裝置  100% X 375px
     //  vw(以裝置的寬為寬度) vh(以裝置的高為高度)
     #Bannerbox {
-    width: $W10;
-    height: $BHsmall;
-    // 超出範圍設定,能滑動x軸,讓圖片在框架中左右滑動
-    overflow-x: auto;
-    background-color: cadetblue;
-    ul {
-      width: $W10 * 5;
-    li {
-        width: 100vw;
-        height: $BHsmall;
-        float: left;
-  
+      width: $W10;
+      height: $BHsmall;
+      // 超出範圍設定,能滑動x軸,讓圖片在框架中左右滑動
+      overflow-x: auto;
+      background-color: cadetblue;
+      ul {
+        width: $W10 * 5;
+        li {
+            width: 100vw;
+            height: $BHsmall;
+            float: left;
+      
+        }
+        
+      // .Box1{
+      // background-color: aliceblue
+      // }
+      // .Box2{
+      //   background-color: aqua
+      // }
+      // .Box3{
+      //   background-color: blueviolet
+      // }
+      // .Box4{
+      //   background-color: brown
+      // }
+      // .Box5{
+      //   background-color: coral
+      // }
+      }
+}
     }
-       
-    // .Box1{
-    // background-color: aliceblue
-    // }
-    // .Box2{
-    //   background-color: aqua
-    // }
-    // .Box3{
-    //   background-color: blueviolet
-    // }
-    // .Box4{
-    //   background-color: brown
-    // }
-    // .Box5{
-    //   background-color: coral
-    // }
-    // }
-}
-}
 footer {
   nav {
     #pohotoshop作品 {
