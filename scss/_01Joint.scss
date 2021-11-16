@@ -44,6 +44,10 @@ $W10:$W10 / 10 * 10;
     display: none;
 }
 
+//  mixin 混合函式
+@mixin ON {
+    display: none;
+}
 // 背景圖片替代文字
 @mixin BgText($Bs) {
     // 將文字移至裝置之外
