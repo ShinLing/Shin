@@ -69,11 +69,21 @@ $W10:$W10 / 10 * 10;
 }
 // 設定 05 06 07 檔案共用的寬度,導覽列的按鈕,所以會在nav 內呼叫
 @mixin LargeNa {
+    // 計算方式
+    // 設定 寬度的基準值 5%
+    $W05: 5%;
+    // 設定 代表 Logo寬度的變數 30% ;寬度的倍數
+    $LogoWidth: $W05 * 6;
+    
+
+    //設定代表LI寬度的變數:(總寬度- LOGO寬度) /剩餘的按鈕數
+    $liWidth: ($W10 - $LogoWidth) / 4;
+    // 樣式數
      #Logo{
         //  寬度
-        width: $W1 * 3;
+        width: $LogoWidth;
      }
     li{
-        width: ($W10 - 30%) / 4;
+        width: $liWidth;
     }
 }
