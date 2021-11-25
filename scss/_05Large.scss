@@ -9,7 +9,7 @@
          display: flex;
 
         //  呼叫 導覽列按鈕的寬度設定
-        @include LargeNav;
+        @include LargeNav(6,4);
 
           // 商標
         #Logo {
@@ -38,7 +38,7 @@
            }
 
            #MENU {
-            @include DN;
+            @include Dn;
         }
          }
 
@@ -61,20 +61,20 @@
             }
           }
         }
+  #main {
+      article{
+        width: $W10;
+        height: 650px;
+        border-bottom-width :2px;
+        border-bottom-style:solid;
+        border-bottom-color: cornflowerblue
+
+
+             }
+        }
     footer {
       nav {
-        #pohotoshop作品 {
-          @extend %subnav;
-          background-color: bisque;
-        }
-        #illustrator作品 {
-          @extend %subnav;
-          background-color: aquamarine;
-        }
-        #水彩作品 {
-          @extend %subnav;
-          background-color: cadetblue;
-        }
+        
       }
     }
   }

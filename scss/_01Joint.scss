@@ -16,6 +16,10 @@
     // 字形
     font-family: 'cwTeXYen', sans-serif,'微軟正黑體';
     }
+img {
+    width: 100%;
+    height: auto;
+}
 // 變數區
 $W10: 100%;
 $Tpx: 16px;
@@ -68,16 +72,16 @@ $W10:$W10 / 10 * 10;
     background-size: $Bs;
 }
 // 設定 05 06 07 檔案共用的寬度,導覽列的按鈕,所以會在nav 內呼叫
-@mixin LargeNa {
+@mixin LargeNav($multiple,$BtnNum){
     // 計算方式
     // 設定 寬度的基準值 5%
     $W05: 5%;
     // 設定 代表 Logo寬度的變數 30% ;寬度的倍數
-    $LogoWidth: $W05 * 6;
+    $LogoWidth: $W05 *$multiple ;
     
 
     //設定代表LI寬度的變數:(總寬度- LOGO寬度) /剩餘的按鈕數
-    $liWidth: ($W10 - $LogoWidth) / 4;
+    $liWidth: ($W10 - $LogoWidth) / $BtnNum;
     // 樣式數
      #Logo{
         //  寬度

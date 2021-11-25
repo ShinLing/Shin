@@ -3,19 +3,6 @@
 // scss 繼承
 // scss 變數 要計算的值或者常變動的值 $
 
-
-
-// 繼承區
-%Dn {
-  // 不顯示
-  display: none;
-  }
-  %subnav{
-    // 寬度 與文字顏色 頁尾次選單
-    width: 50%;
-    color:white;
-  }
-  
   header{
        nav{
         //  設定nav專用(區域)變數;vh單位(以裝置的高度*百分比計算,同時顯示框架的高度值)

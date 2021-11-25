@@ -1,22 +1,43 @@
 @charset "UTF-8";
 /* 樣式 */
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 * {
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
+  font-family: 'cwTeXYen', sans-serif,'微軟正黑體';
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header nav #Portfolio, header nav #About, header nav #Project, header nav #Connection {
+  display: none;
 }
 
 @media screen and (max-width: 576px) {
+  /*
+網頁使用的單位
+寬度 高度 行距 文字 物件的距離(外間距與內間距),只要能計算的質都有單位
+基礎單位 像素(PX)
+響應是網頁的單位 百分比(%) vw 與 vh(裝置可視的寬度與高度,新單位)
+
+1.百分比(%)的缺點,高度無法顯示
+2.vw 與vh的缺點,舊瀏覽器IE不支援;MAC瀏覽器(safari),因為手機板需要扣除瀏覽器自帶功能的按鈕(在畫面的下方)
+
+行距 文字,百分比的單位 em (子物件的設定值會疊加父物件的設定值)和rem(不受父物件的設定值影響)
+ */
   header nav #Portfolio, header nav #About, header nav #Project, header nav #Connection {
     display: none;
   }
-  footer nav #pohotoshop作品, footer nav #illustrator作品, footer nav #水彩作品 {
+  footer nav #pohotoshop, footer nav #illustrator, footer nav #watercolor, footer nav #pohotoshop作品, footer nav #illustrator作品, footer nav #水彩作品 {
     width: 50%;
     color: white;
   }
   header nav {
     width: 100%;
-    height: 65px;
     background-color: lightpink;
   }
   header nav li {
@@ -26,13 +47,21 @@
     width: 85%;
     font-size: 2rem;
     text-indent: 30px;
+    text-align: center;
     line-height: 65px;
-    background-color: lightsalmon;
+    text-indent: -999999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../imgs/icon/0001.png);
+  }
+  header nav #portfolio, header nav #About, header nav #Project, header nav #Contact {
+    display: none;
   }
   header nav #Menu {
     width: 15%;
     text-align: center;
-    line-height: 80px 100%;
+    line-height: 65px;
     text-indent: -999999px;
     background-image: url(../../imgs/icon/0001.png);
     background-position: center;
@@ -42,40 +71,161 @@
   header nav .clear {
     clear: both;
   }
-  header #Bannerbox {
+  header nav #Portfolio, header nav #About, header nav #Project, header nav #Connection {
+    display: none;
+  }
+  header #MobileNav {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    background-color: tan;
+  }
+  header #BannerBox {
     width: 100%;
     height: 280px;
+    overflow-x: auto;
     background-color: cadetblue;
   }
-  footer nav #pohotoshop作品 {
+  header #BannerBox ul {
+    width: 500%;
+  }
+  header #BannerBox ul li {
+    width: 100vw;
+    height: 280px;
+    float: left;
+  }
+  footer nav #pohotoshop {
     background-color: bisque;
   }
-  footer nav #illustrator作品 {
+  footer nav #illustrator {
     background-color: aquamarine;
   }
-  footer nav #水彩作品 {
+  footer nav #watercolor {
     background-color: cadetblue;
   }
 }
 
-@media screen and (min-width: 576px) {
-  header nav {
-    width: 100%;
-    height: 65px;
-  }
+header nav {
+  height: 7vh;
+  background-color: lightpink;
+}
+
+header nav li {
+  float: left;
+}
+
+header nav #Logo {
+  width: 90%;
+  font-size: 2rem;
+  text-indent: 30px;
+  line-height: 7vh;
+  background-color: darkgrey;
+}
+
+header nav #Menu {
+  width: 10%;
+  text-align: center;
+  line-height: 7vh;
+  text-indent: -999999px;
+  background-image: url(../../imgs/icon/0001.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+header nav .clear {
+  clear: both;
+}
+
+header #Bannerbox {
+  width: 100%;
+  height: 280px;
+  overflow-x: auto;
+  background-color: cadetblue;
+}
+
+header #Bannerbox ul {
+  width: 500%;
+}
+
+header #Bannerbox ul li {
+  width: 100vw;
+  height: 280px;
+  float: left;
+}
+
+footer nav #pohotoshop作品 {
+  background-color: bisque;
+}
+
+footer nav #illustrator作品 {
+  background-color: aquamarine;
+}
+
+footer nav #水彩作品 {
+  background-color: cadetblue;
 }
 
 @media screen and (min-width: 768px) {
-  #main {
-    width: 80%;
-    background-color: indigo;
+  footer nav #pohotoshop, footer nav #illustrator, footer nav #watercolor, footer nav #pohotoshop作品, footer nav #illustrator作品, footer nav #水彩作品 {
+    width: 50%;
+    color: white;
   }
 }
 
 @media screen and (min-width: 992px) {
-  #main {
-    width: 85%;
-    background-color: lightslategrey;
+  header nav {
+    width: 100%;
+    background-color: lightpink;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav #Logo {
+    width: 30%;
+  }
+  header nav li {
+    width: 17.5%;
+  }
+  header nav #Logo {
+    text-align: center;
+    font-size: 2rem;
+    text-indent: 0;
+    background-color: white;
+  }
+  header nav li {
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 4.3rem;
+  }
+  header nav #Portfolio, header nav #About, header nav #Project, header nav #Connection {
+    display: none;
+  }
+  header nav #MENU {
+    display: none;
+  }
+  header #Bannerbox {
+    width: 100%;
+    height: 280px;
+    overflow-x: auto;
+    background-color: cadetblue;
+  }
+  header #Bannerbox ul {
+    width: 500%;
+  }
+  header #Bannerbox ul li {
+    width: 100vw;
+    height: 280px;
+    float: left;
+  }
+  header #main article {
+    width: 100%;
+    height: 650px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: cornflowerblue;
   }
 }
 

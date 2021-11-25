@@ -110,10 +110,10 @@ header{
     overflow-x: auto;
     background-color: cadetblue;
     ul {
-      // width: $W10 * 5;
+      width: $W10 * 5;
       li {
           width: 100vw;
-          // height: $BHsmall;
+          height: $BHsmall;
           float: left;
       }
       
