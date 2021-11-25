@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,97 +11,94 @@
 
 <body>
     <!-- 頁首 一頁式或多頁式 放共用性質資料 像素px(固定值) %(百分比,依螢幕尺寸計算) -->
-    <header> 
+    <header>
         <!-- 內容 導覽列(連結) :廣告區(圖片,輪播圖)-->
         <!-- 導覽列:pohotosop作品 illustrator作品 水彩作品 關於Shin 聯絡表單 -->
         <nav>
             <!-- 清單li -->
-            <li id="Logo"> Shin 的個人工作室</li>
-            <li id="Portfolio">作品分享</li>
-            <li id="About">關於Shin</li>
-            <li id="Project">專案設計</li>
-            <li id="Connection">聯絡表單</li>
+            <li id="Logo"> 
+                <a href="index.html">Shin 的個人工作室</a>
+            </li>
+            <li id="Portfolio">
+                <a href="PortfolioBox">作品分享</a>
+            </li>
+            <li id="About">
+                <a href="AboutBox">關於Shin</a>
+            </li>
+            <li id="Project">
+                <a href="ProjectBox">專案設計</a>
+            </li>
+            <li id="Connection">
+                <a href="ConnectionBox">聯絡表單</a>
+
+            </li>
             <!-- 將圖片置入li標籤之中   src連結位置 alt取代文字title圖片說明文-->
             <li id="Menu">
                 選單按鈕
                 <!-- <img src="imges/icon/0001.svg"alt="選單"title="選單按鈕"> -->
-            </li> 
-            <!-- 段落 -->
-                  <p class="Clear" ></p>
-         </nav>
-       <!-- 手機版的導覽列 -->
+            </li>
+        <!-- 手機版的導覽列 -->
         <ul id="MobileNav">
             <li id="MobilePortfolio">
-            <a href="PortfolioBox">作品分享</a>
-        </li>
-             <li id="MobileAbout">
-                 <a href="About">關於Shin</a>
-             </li>
-             <li id="MobileProject">
-                 <a href="Project">專案設計</a>
-             </li>
-             <li id="MobileConnection">
-                 <a href="Connection">聯絡表單</a>
-             </li>
+                <a href="PortfolioBox">作品分享</a>
+            </li>
+            <li id="MobileAbout">
+                <a href="About">關於Shin</a>
+            </li>
+            <li id="MobileProject">
+                <a href="Project">專案設計</a>
+            </li>
+            <li id="MobileConnection">
+                <a href="Connection">聯絡表單</a>
+            </li>
+        </ul>
+       </nav>
+        <!-- 基本輪播圖片 1組為 5張圖 -->
+        <div id="BannerBox">
+            12345
+            <!-- 項目清單 ul li 廣告區 1920 X 600(電腦版 -->
+            <ul>
+               
             </ul>
-         <!-- 基本輪播圖片 1組為 5張圖 -->
-        <div id="BannerBox"> )
-         <!-- 項目清單 ul li 廣告區 1920 X 600(電腦版 -->
-         <ul>
-             <li class="Box1">
-                 <img src="imgs/banner/Banner01.jpg" alt="">
-            </li>
-             <li class="Box2">
-                 <img src="imgs/banner/Banner02.jpg" alt="" >
-            </li>
-             <li class="Box3">
-                 <img src="imgs/banner/Banner03.jpg" alt="" >
-            </li> 
-             <li class="Box4"
-             ><img src="imgs/banner/Banner04.jpg" alt="" >
-            </li> 
-             <li class="Box5">
-                 <img src="imgs/banner/Banner05.jpg" alt="" >
-            </li>
-         </ul>
         </div>
     </header>
     <!-- 內容  一頁式用區塊區分內容 ARTICLE文章區塊 標題(h1-h6)-->
     <!-- IE瀏覽器,不支援main標籤,取代方式有兩種:方法一:將main改為區塊(div)標籤,然後利用ID選擇器命名:方法二:文章標籤(article) :若有多個相同標籤,請用ID選擇器(唯一)或是 類別選擇器(class)區分-->
-    <article id="main"></article>
-    <article>
-        <h1>pohotoshop作品</h1>
-        <a href="#Logo">TOP</a>
+    <article id="main">
     </article>
     <article>
-        <h1>illustrator作品</h1>
+        <h1 id="PohotoshopBox">pohotoshop作品</h1>
     </article>
     <article>
-        <h1>water color作品</h1>
+        <h1 id="IllustratorBox">illustrator作品</h1>
     </article>
     <article>
-        <h1>關於Shin</h1>
+        <h1 id="WatercolorBox">water color作品</h1>
     </article>
     <article>
-        <h1>服務項目</h1>
+        <h1 id="AboutBox">關於Shin</h1>
     </article>
     <article>
-        <h1>聯絡表單</h1>
+        <h1 id="ProjectBox">專案設計</h1>
     </article>
-    
-    
+    <article>
+        <h1 id="ContactBox">聯絡表單</h1>
+    </article>
+    <a href="#Logo">TOP</a>
+
+
     <!-- 頁尾 一頁式或多頁式 放共用性質資料 -->
     <footer>
         <!-- 次導覽列 版權宣告 聯絡方式 -->
         <nav id="subnav">
-<li id='pohotoshop作品'>pohotoshop作品</li>
-<li id='illustrator作品'>illustrator作品</li>
-<li id='water color作品'>water color作品</li>
+            <li id='pohotoshop'>pohotoshop作品</li>
+            <li id='illustrator'>illustrator作品</li>
+            <li id='watercolor'>water color作品</li>
         </nav>
         <address>
             <li>連絡電話</li>
-<li>E-mail</li>
-<li>line</li>
+            <li>E-mail</li>
+            <li>line</li>
         </address>
         <h6>
             <!-- 年份 公司名稱 -->
@@ -108,4 +106,5 @@
         </h6>
     </footer>
 </body>
+
 </html>

@@ -24,118 +24,128 @@ display: none;
 }
 
 header{
-     nav{
-      //  設定nav專用(區域)變數;vh單位(以裝置的高度*百分比計算,同時顯示框架的高度值)
-      //  屬於 nav 寬度% ;高度 px ;背景色(暫)
-      $NH: 7vh;
-      height: $NH;
-      background-color: lightpink;
+    nav{
+    //  設定nav專用(區域)變數;vh單位(以裝置的高度*百分比計算,同時顯示框架的高度值)
+    //  屬於 nav 寬度% ;高度 px ;背景色(暫)
+    width: $NW;
+    // height: $NH;
+    background-color: lightpink;
 
-      // 指向清單li
-      li{
-        // 將logo與選單設定為垂直排列(一列)float
-        // float(浮點對齊)缺點,會自動往上一階層(新圖層),所以,父框架(外框架),若沒有設定高度,系統將會視為不存在
-        float: left;
-      }
-      // 商標
-      #Logo{
-        // 寬度8.5等份
-        width: $W1 * 8 + 5%;
-        // 文字尺寸,內縮,水平置中
-        font-size: $Trem * 2;
-        // 內縮:方法1,首行縮排(單行文字)
-        text-indent: 30px;
-        // 文字水平置中,行距設定(父框架的高度=行距的數值) line-height: 80 * 0.15 +px;
-        // 方法1 父框架有高度時,父框架的高度 = 行距的數值 ;方法2 文字尺寸倍數 + 3 
-        // 5rem = 80px
-        text-align: center;
-        line-height: $NH;
-        // 自行輸入所需的值
-        @include BgText(contain);
-        // 背景圖片連結
-        background-image: url(../imgs/icon/0001.png);
-      }
-
-      // 導覽列:只顯示Logo和Mene,其餘不顯示
-      // css3集合寫法,將共同的樣式一同編輯
-      #portfolio, #About, #Project, #Contact {
-        // 呼叫 @mixin
-        @include DN;
-      }
-      // 選單
-      #Menu{
-        // 寬度 1.5 等份
-        width: $W1 + 5%;
-        // 文字水平(行距).垂直(文字對齊--置中)置中
-        text-align: center;
-        line-height: $NH;
-        // 將文字移至裝置之外
-        text-indent: -999999px;
-        // 背景圖片連結
-        background-image: url(../../imgs/icon/0001.png);
-        // 背景圖片對齊(定位點)
-        background-position: center;
-        // 背景圖片取消重覆顯示
-        background-repeat:  no-repeat;
-        // 背景圖片尺寸 auto自動 cover(背景圖片小於容器時,放大圖片至容器大小並填滿;背景圖片大於容器時,縮小圖片至容器大小並填滿;缺點,容器的長寬比例與背景圖片的長寬比例不合時,會出現背景圖片失真)contain(背景圖片大於容器時,縮小至容器內呈現,會留邊界)
-        background-size: contain;
-      }
-
-      .clear{
-        clear:both;
-      }
-
-      
-      #Portfolio, #About, #Project, #Connection {
-        @extend %Dn;
-       }
-     }
-    //  輪播圖片 超小與小裝置  100% X 375px
-    //  vw(以裝置的寬為寬度) vh(以裝置的高為高度)
-    #Bannerbox {
-      width: $W10;
-      height: $BHsmall;
-      // 超出範圍設定,能滑動x軸,讓圖片在框架中左右滑動
-      overflow-x: auto;
-      background-color: cadetblue;
-      ul {
-        width: $W10 * 5;
-        li {
-            width: 100vw;
-            height: $BHsmall;
-            float: left;
-      
-        }
-        
-      // .Box1{
-      // background-color: aliceblue
-      // }
-      // .Box2{
-      //   background-color: aqua
-      // }
-      // .Box3{
-      //   background-color: blueviolet
-      // }
-      // .Box4{
-      //   background-color: brown
-      // }
-      // .Box5{
-      //   background-color: coral
-      // }
-      }
-}
+    // 指向清單li
+    li{
+      // 將logo與選單設定為垂直排列(一列)float
+      // float(浮點對齊)缺點,會自動往上一階層(新圖層),所以,父框架(外框架),若沒有設定高度,系統將會視為不存在
+      float: left;
     }
+    // 商標
+    #Logo{
+      // 寬度8.5等份
+      width: $W1 * 8 + 5%;
+      // 文字尺寸,內縮,水平置中
+      font-size: $Trem * 2;
+      // 內縮:方法1,首行縮排(單行文字)
+      text-indent: 30px;
+      // 文字水平置中,行距設定(父框架的高度=行距的數值) line-height: 80 * 0.15 +px;
+      // 方法1 父框架有高度時,父框架的高度 = 行距的數值 ;方法2 文字尺寸倍數 + 3 
+      // 5rem = 80px
+      text-align: center;
+      line-height: $NH;
+      // 自行輸入所需的值
+      @include BgText(contain);
+      // 背景圖片連結
+      background-image: url(../imgs/icon/0001.png);
+    }
+
+    // 導覽列:只顯示Logo和Mene,其餘不顯示
+    // css3集合寫法,將共同的樣式一同編輯
+    #portfolio, #About, #Project, #Contact {
+      // 呼叫 @mixin
+      @include Dn;
+    }
+    // 選單
+    #Menu{
+      // 寬度 1.5 等份
+      width: $W1 + 5%;
+      // 文字水平(行距).垂直(文字對齊--置中)置中
+      text-align: center;
+      line-height: $NH;
+      // 將文字移至裝置之外
+      text-indent: -999999px;
+      // 背景圖片連結
+      background-image: url(../../imgs/icon/0001.png);
+      // 背景圖片對齊(定位點)
+      background-position: center;
+      // 背景圖片取消重覆顯示
+      background-repeat:  no-repeat;
+      // 背景圖片尺寸 auto自動 cover(背景圖片小於容器時,放大圖片至容器大小並填滿;背景圖片大於容器時,縮小圖片至容器大小並填滿;缺點,容器的長寬比例與背景圖片的長寬比例不合時,會出現背景圖片失真)contain(背景圖片大於容器時,縮小至容器內呈現,會留邊界)
+      background-size: contain;
+    }
+
+    .clear{
+      clear:both;
+    }
+
+    
+    #Portfolio, #About, #Project, #Connection {
+      @include Dn;
+      }
+    }
+  //  輪播圖片 超小與小裝置  100% X 375px
+  //  vw(以裝置的寬為寬度) vh(以裝置的高為高度)
+
+  // 手機的導覽列
+  #MobileNav{
+    width: $W1 *10;
+    // 高度單位vh (裝置的可視高度)
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    background-color: tan;
+  }
+  #BannerBox {
+    width: $W10;
+    height: $BHsmall;
+    // 超出範圍設定,能滑動x軸,讓圖片在框架中左右滑動
+    overflow-x: auto;
+    background-color: cadetblue;
+    ul {
+      // width: $W10 * 5;
+      li {
+          width: 100vw;
+          // height: $BHsmall;
+          float: left;
+      }
+      
+    // .Box1{
+    // background-color: aliceblue
+    // }
+    // .Box2{
+    //   background-color: aqua
+    // }
+    // .Box3{
+    //   background-color: blueviolet
+    // }
+    // .Box4{
+    //   background-color: brown
+    // }
+    // .Box5{
+    //   background-color: coral
+    // }
+    }
+  }
+}
 footer {
   nav {
-    #pohotoshop作品 {
+    #pohotoshop{
       @extend %subnav;
       background-color: bisque;
     }
-    #illustrator作品 {
+    #illustrator{
       @extend %subnav;
       background-color: aquamarine;
     }
-    #水彩作品 {
+    #watercolor{
       @extend %subnav;
       background-color: cadetblue;
     }
