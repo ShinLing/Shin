@@ -136,18 +136,56 @@ header{
   }
 }
 footer {
+  .HRLine{
+  margin: {
+     top:15px;
+     bottom: 15px;
+  };
+  };
   nav {
-    #pohotoshop{
-      @extend %subnav;
-      background-color: bisque;
+     width: $W1*8;
+     display: flex;
+
+  }
+  #pohotoshop {
+  order: 3;
+  }
+ .LeftLine {
+  order:2;
+ }
+ #illustrator {
+  order: 1;
+  }
+  .RightLine {
+    order:4;
+  }
+  #watercolor {
+    order:5;
+  }
+  address{
+    width: $W1 * 4;
+    // 彈性布局
+    display: flex;
+    // 上邊界nav與address的距離
+    margin: {
+      top: 10px;
+      bottom: 20px;
     }
-    #illustrator{
-      @extend %subnav;
-      background-color: aquamarine;
+    .Line{
+      width: $W1 * 2;
+      height: 30px;
+      background-image: url(../../imgs/icon/0001.png) ;
+      @include BgText(contain);
     }
-    #watercolor{
-      @extend %subnav;
-      background-color: cadetblue;
-    }
+  }
+ 
+  h6{
+    // 文字置中
+    text-align: center;
+    // 文字尺寸
+    font-size: $Trem * 0.8;
+    // 文字粗細
+    font-weight: 200;
+    background-color: chocolate;
   }
 }
