@@ -73,6 +73,19 @@
                     <img src="imgs/banner/Banner05.jpg" alt="" >
                </li>
             </ul>
+            <!-- html5 新標籤 picture 必要配置標籤 source和 img (如果所有圖片都判讀不到,就會讀取img上的片)響應式圖片區塊:media的判斷,用 max-width最大寬度的設定-->
+        <picture>
+            <!--  -->
+            
+            <source class="SmallImg" srcset="imgs/banner/s/banner01s.jpg"media="(max-width:576px)">
+            <source class="SmallImg" srcset="imgs/banner/s/banner02s.jpg"media="(max-width:576px)">
+            <source class="SmallImg" srcset="imgs/banner/s/banner03s.jpg"media="(max-width:576px)">
+            <source class="SmallImg" srcset="imgs/banner/s/banner04s.jpg"media="(max-width:576px)">
+            <source class="SmallImg" srcset="imgs/banner/s/banner05s.jpg"media="(max-width:576px)">
+            <source srcset="imgs/banner/m/banner01m.jpg"media="(max-width:992px)">
+            <source srcset="imgs/banner/banner01.jpg"media="(min-width:1024px)">
+            <img src="imgs/banner/s/banner01s.jpg" alt="">
+        </picture>
         </div>
     </header>
     <!-- 內容  一頁式用區塊區分內容 ARTICLE文章區塊 標題(h1-h6)-->
@@ -94,10 +107,40 @@
     <article>
         <h1 id="ProjectBox">專案設計</h1>
     </article>
+    <a href="#Logo">TOP</a>
     <article>
         <h1 id="ContactBox">聯絡表單</h1>
+<!-- 表單form,實際用途是傳輸資料用,將資料寫入資料庫或由資料庫讀出修改 -->
+<!-- get傳輸不重要的資料,資料會顯示在網址上;post傳輸重要的資料,直接會加密的方式傳輸 -->
+<form action="" method="get">
+    <!-- 姓名 聯絡方式 問題 詳細內容 送出 重新輸入 -->
+    <!-- label 可以直接呼叫 input;for與id相同設定 -->
+    <!-- name 欄位名稱,對應資料庫的欄位名稱:命名:不能用中文,開頭不能為數字 -->
+    <!-- 指定初始值 value:使用者需刪除內容,才可以填入資料 -->
+    <!-- readonly 唯獨不可以更改內容:由資料庫導入資料時設定,可利用 javascript判斷開啟功能 -->
+
+    <li>
+        <label for="UserName">姓名:</label>
+        <input type="text" name="" id="UserName" value="請輸入中文姓名" required
+        minlength="2" maxlength="6"> 
+    </li>
+    <label for="E_mail">
+        電子信箱
+        <input type="email" name="" id="E_mail" required placeholder="輸入可以接收到的電子信箱">
+    </label>
+    <!-- 多行文字 textarea: placeholder 輸入的提示訊息,輸入資料時會自動消失 -->
+    <label for="">
+        詳細內容
+        <textarea name="" id="" cols="30" rows="10" placeholder="請輸入問題內容,限制100個字,最少10個字"maxlength="100" minlength="10">
+</textarea>
+    </label>
+    <!-- 按鈕 -->
+    <div class="FormBtn">
+        <input type="submit" value="送出資料">
+    </div>
+</form>
     </article>
-    <a href="#Logo">TOP</a>
+</article>
 
 
     <!-- 頁尾 一頁式或多頁式 放共用性質資料 -->

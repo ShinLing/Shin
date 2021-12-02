@@ -51,9 +51,7 @@ header{
       text-align: center;
       line-height: $NH;
       // 自行輸入所需的值
-      @include BgText(contain);
-      // 背景圖片連結
-      background-image: url(../imgs/icon/0001.png);
+      @include BG(icon,"0001.png",contain);
     }
 
     // 導覽列:只顯示Logo和Mene,其餘不顯示
@@ -109,13 +107,14 @@ header{
     // 超出範圍設定,能滑動x軸,讓圖片在框架中左右滑動
     overflow-x: auto;
     background-color: cadetblue;
-    ul {
-      width: $W10 * 5;
-      li {
-          width: 100vw;
-          height: $BHsmall;
-          float: left;
-      }
+   picture{
+    //  圖片框的寬度尺寸
+    width: $W10 * 5;
+    .SmallImg{
+    width: 100vw;
+    float: left;
+    }
+   }
       
     // .Box1{
     // background-color: aliceblue
@@ -134,7 +133,6 @@ header{
     // }
     }
   }
-}
 footer {
   .HRLine{
   margin: {
@@ -143,10 +141,11 @@ footer {
   };
   };
   nav {
-     width: $W1*8;
+     width: $W1 * 8;
      display: flex;
 
   }
+   // 彈性布局order重新設定排列順序
   #pohotoshop {
   order: 3;
   }
@@ -164,7 +163,7 @@ footer {
   }
   address{
     width: $W1 * 4;
-    // 彈性布局
+   
     display: flex;
     // 上邊界nav與address的距離
     margin: {
@@ -174,8 +173,7 @@ footer {
     .Line{
       width: $W1 * 2;
       height: 30px;
-      background-image: url(../../imgs/icon/0001.png) ;
-      @include BgText(contain);
+      @include BG(icon,"00002.svg",contain)
     }
   }
  
