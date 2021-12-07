@@ -1,7 +1,6 @@
 
 
 %subnav{
-  // 寬度 與文字顏色 頁尾次選單
   width: 50%;
   color:white;
 }
@@ -10,3 +9,59 @@
          nav{         
     }
   }
+
+  header{
+    nav{
+     $NH: 7vh;
+     height: $NH;
+     background-color: lightpink;
+     li{
+       float: left;
+     }
+     #Logo{
+       width: $W1 * 9;
+       font-size: $Trem * 2;
+       text-indent: 30px;
+       line-height: $NH;
+       background-color: darkgrey;
+     }
+     #Menu{
+       width: $W1;
+       text-align: center;
+       line-height: $NH;
+       text-indent: -999999px;
+       background-image: url(../../imgs/icon/0001.png);
+       background-position: center;
+       background-repeat:  no-repeat;
+       background-size: contain;
+     }
+    .clear{
+       clear:both;
+     }
+     #Portfolio, #About, #Project, #Connection {
+       @extend %Dn;
+      }
+    }
+
+   #Bannerbox {
+     width: $W10;
+     height: $BHsmall;
+     overflow-x: auto;
+     background-color: cadetblue;
+     .ImgBox {
+        
+         width: $W10 * 5 ;
+         .SmallImg {
+              width: 100vw;
+              float: left;
+         }
+     }
+   
+     }
+}
+
+footer {
+ nav {
+  
+   }
+ }

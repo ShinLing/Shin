@@ -1,5 +1,6 @@
 
-  header{
+  header{   
+
          nav{
           //  屬於 nav 寬度% ;高度 px ;背景色(暫)
           width:  $NW;
@@ -45,21 +46,22 @@
         
         //  輪播圖片 超小與小裝置  100% X 375px
         //  vw(以裝置的寬為寬度) vh(以裝置的高為高度)
-        #Bannerbox {
-          width: $W10;
-          // 超出範圍設定,能滑動x軸,讓圖片在框架中左右滑動
-          overflow-x: auto;
-          background-color: cadetblue;
-          ul {
-            // 圖片寬的寬度尺寸
-            width: $W10 * 5;
-            li {
-                width: 100vw;
-                float: left;
-          
-            }
+       
           }
-        }
+          #Bannerbox {
+            width: $W10;
+            height: $BHsmall;
+            // 超出範圍設定,能滑動x軸,讓圖片在框架中左右滑動
+            overflow-x: auto;
+            background-color: cadetblue;
+            .ImgBox {
+                // 圖片框的寬度尺寸
+                width: $W10 * 5 ;
+            .SmallImg {
+                     width: 100vw;
+                     float: left;
+                }
+             }
   #main {
       article{
         width: $W10;
