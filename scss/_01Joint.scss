@@ -41,11 +41,12 @@ $W10: 100vw;
 $Tpx: 16px;
 $Trem: 1rem;
 $Em: 1em;
+$WPer: 10%;
 
-$NW: $W10;
-// 導覽列的寬
-$NH: 65px;
-// 導覽列的高
+$NW: $W10; // 導覽列的寬
+$NH: 65px; // 導覽列的高
+
+
 // 輪播圖
 $BHsmall: 280px; // 超小與小裝置
 
@@ -68,7 +69,7 @@ $W10:$W10 / 10 * 10;
 }
 
 // mixin 混合函式
-@mixin Dn {
+@mixin DN {
     display: none;
 }
 

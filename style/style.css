@@ -168,22 +168,91 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
     background-color: chocolate;
   }
   #main #ContactBox {
-    background-color: darkcyan;
+    background-image: url(../../imgs/bg/w-08pla-1.gif);
   }
   #main #ContactBox #ContactTitle {
     padding-top: 15px;
     padding-bottom: 15px;
   }
   #main #ContactBox form {
-    width: 90vw;
+    width: 75vw;
   }
   #main #ContactBox form > div {
     padding-top: 10px;
     padding-bottom: 10px;
-    list-style-type: none;
-    background-color: beige;
+    margin-bottom: 10px;
   }
-  #main #ContactBox form .E_mail {
+  #main #ContactBox form > #NameBox > label, #main #ContactBox form > .Mail > label, #main #ContactBox form > .Ques > p, #main #ContactBox form .Text > li {
+    margin-bottom: 10px;
+  }
+  #main #ContactBox form > #NameBox > Input[type=text], #main #ContactBox form > .Mail > input {
+    width: 75%;
+    height: 30px;
+    font-size: 1.1rem;
+    padding-left: 10px;
+    color: honeydew;
+    font-weight: 500;
+  }
+  #main #ContactBox form > div {
+    font-size: 1.3rem;
+  }
+  #main #ContactBox form > #NameBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main #ContactBox form > #NameBox > label {
+    width: 100%;
+  }
+  #main #ContactBox form > #NameBox > input[type=text]::-webkit-input-placeholder {
+    color: lightblue;
+    font-weight: 600;
+  }
+  #main #ContactBox form > #NameBox > input[type=text]:-ms-input-placeholder {
+    color: lightblue;
+    font-weight: 600;
+  }
+  #main #ContactBox form > #NameBox > input[type=text]::-ms-input-placeholder {
+    color: lightblue;
+    font-weight: 600;
+  }
+  #main #ContactBox form > #NameBox > input[type=text]::placeholder {
+    color: lightblue;
+    font-weight: 600;
+  }
+  #main #ContactBox form > .Mail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main #ContactBox form > .Mail > label {
+    width: 100%;
+  }
+  #main #ContactBox form > .Ques {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #main #ContactBox form > .Ques > p {
+    width: 100%;
+  }
+  #main #ContactBox form > li {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+  #main #ContactBox .Text > li {
+    width: 100%;
+  }
+  #main #ContactBox .Text > textarea {
+    width: 95%;
+  }
+  #main #ContactBox .E_mail2 {
     display: none;
   }
 }

@@ -33,7 +33,7 @@ header{
     // css3集合寫法,將共同的樣式一同編輯
     #portfolio, #About, #Project, #Contact {
       // 呼叫 @mixin
-      @include Dn;
+      @include DN;
     }
     // 選單
     #Menu{
@@ -60,7 +60,7 @@ header{
 
     
     #Portfolio, #About, #Project, #Connection {
-      @include Dn;
+      @include DN;
       }
     }
   //  輪播圖片 超小與小裝置  100% X 280 px
