@@ -5,10 +5,12 @@
   color:white;
 }
     
-    header{
-         nav{         
-    }
-  }
+     header{
+        nav{ 
+        }
+      }        
+    
+  
 
   header{
     nav{
@@ -39,7 +41,8 @@
        clear:both;
      }
      #Portfolio, #About, #Project, #Connection {
-       @extend %Dn;
+      //  @extend %Dn;
+      @include Dn;
       }
     }
 
@@ -48,20 +51,14 @@
      height: $BHsmall;
      overflow-x: auto;
      background-color: cadetblue;
-     .ImgBox {
-        
-         width: $W10 * 5 ;
-         .SmallImg {
-              width: 100vw;
-              float: left;
+     
          }
      }
    
-     }
-}
+     
 
 footer {
- nav {
+nav {
   
    }
  }

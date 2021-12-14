@@ -60,31 +60,31 @@
             <!--將PICTURE  -->
 
             <picture class="ImgBox01 SmallImg">
-                <source class="SmallImg" srcset="imgs/banner/s/banner01s.jpg" media="(max-width:767px )">
+                <source srcset="imgs/banner/s/banner01s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner01m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner01.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
             <picture class="ImgBox02 SmallImg">
-                <source class="SmallImg" srcset="imgs/banner/s/banner02s.jpg" media="(max-width:767px )">
+                <source srcset="imgs/banner/s/banner02s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner02m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner02.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
             <picture class="ImgBox03 SmallImg">
-                <source class="SmallImg" srcset="imgs/banner/s/banner03s.jpg" media="(max-width:767px )">
+                <source  srcset="imgs/banner/s/banner03s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner03m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner03.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
             <picture class="ImgBox04 SmallImg">
-                <source class="SmallImg" srcset="imgs/banner/s/banner04s.jpg" media="(max-width:767px )">
+                <source srcset="imgs/banner/s/banner04s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner04m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner04.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
             <picture class="ImgBox05 SmallImg">
-                <source class="SmallImg" srcset="imgs/banner/s/banner05s.jpg" media="(max-width:767px )">
+                <source srcset="imgs/banner/s/banner05s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner05m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner05.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
@@ -107,17 +107,17 @@
         <h1 id="IllustratorBox">illustrator作品</h1>
     </article>
     <article>
-        <h1 id="WatercolorBox">water color作品</h1>
+        <h1 id="WatercolorBox">watercolor作品</h1>
     </article>
     <article>
         <h1 id="AboutBox">關於Shin</h1>
     </article>
     <article>
         <h1 id="ProjectBox">專案設計</h1>
-    </article>
     <a href="#Logo">TOP</a>
     <article>
-        <h1 id="ContactBox">聯絡表單</h1>
+    <article id="ContactBox">
+        <h1 id="ContactTitle">聯絡表單</h1>
         <!-- 表單form,實際用途是傳輸資料用,將資料寫入資料庫或由資料庫讀出修改 -->
         <!-- get傳輸不重要的資料,資料會顯示在網址上;post傳輸重要的資料,直接會加密的方式傳輸 -->
         <form action="" method="get">
@@ -126,22 +126,55 @@
             <!-- name 欄位名稱,對應資料庫的欄位名稱:命名:不能用中文,開頭不能為數字 -->
             <!-- 指定初始值 value:使用者需刪除內容,才可以填入資料 -->
             <!-- readonly 唯獨不可以更改內容:由資料庫導入資料時設定,可利用 javascript判斷開啟功能 -->
+        </label>
+         <!-- label沒有換行功能 -->
+       </div>
 
+           <div class="Mail">
+               <label for="E_mail">
+            電子信箱
+         <!-- 單行文字<,讓使用者自行輸入帳號;@固定出現;信箱用下拉是選單讓使用者挑選 -->
+         <input type="text" name="" id="E_mail" required placeholder="輸入電子信箱帳號">
+         
+         <!-- 行內標籤span不換行,用來強調或凸顯單獨的顏色 -->
+         <span>@</span>
+         <select name="" id="">
+             <option value="gmail.com"></option>
+             <option value="yahoo.com.tw"></option>
+             <option value="hotmail.com"></option>
+         </select>
+        </label>
+       </div>
+    
+        <!-- 換行 -->
+        <br>
+       
+        
+       
+        <!-- 詢問問題 -->
+        <li class="Ques">
+        <label for="Question">
+            <li>詢問問題</li>
+            <!-- 單選紐radio 送出資料為同一群組,name的名稱要相同;寫入資料庫的值為value的內容-->
             <li>
-                <label for="UserName">姓名:</label>
-                <input type="text" name="" id="UserName" value="請輸入中文姓名" required minlength="2" maxlength="6">
+                <input type="radio" name="Question" id="" value="pohotoshop作品">pohotoshop作品
             </li>
-            <label for="E_mail">
-                電子信箱
-                <input type="email" name="" id="E_mail" required placeholder="輸入可以接收到的電子信箱">
-            </label>
+            <li>
+                <input type="radio" name="Question" id="" value="illustrator作品">illustrator作品
+            </li>
+            <li>
+                <input type="radio" name="Question" id="" value="watercolor作品">watercolor作品
+            </li>
+           </label>
+        </li>
             <!-- 多行文字 textarea: placeholder 輸入的提示訊息,輸入資料時會自動消失 -->
+            <li class="Text">
             <label for="">
                 詳細內容
                 <textarea name="" id="" cols="30" rows="10" placeholder="請輸入問題內容,限制100個字,最少10個字" maxlength="100"
-                    minlength="10">
-</textarea>
+                    minlength="10"></textarea>
             </label>
+        </li>
             <!-- 按鈕 -->
             <div class="FormBtn">
                 <input type="submit" value="送出資料">
@@ -170,7 +203,7 @@
         </address>
         <h6>
             <!-- 年份 公司名稱 -->
-            公司網站全部圖文係屬公司版權所有 &COPY; 2021
+            公司網站全部圖文係屬公司版權所有 &COPY; 2021 <span>2022</span>
         </h6>
     </footer>
 </body>

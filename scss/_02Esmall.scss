@@ -40,7 +40,7 @@ header{
     // 商標
     #Logo{
       // 寬度8.5等份
-      width: $W1 * 8 + 5%;
+      width: $W1 * 8 + 5vw;
       // 文字尺寸,內縮,水平置中
       font-size: $Trem * 2;
       // 內縮:方法1,首行縮排(單行文字)
@@ -63,7 +63,7 @@ header{
     // 選單
     #Menu{
       // 寬度 1.5 等份
-      width: $W1 + 5%;
+      width: $W1 + 5vw;
       // 文字水平(行距).垂直(文字對齊--置中)置中
       text-align: center;
       line-height: $NH;
@@ -186,4 +186,41 @@ footer {
     font-weight: 200;
     background-color: chocolate;
   }
+}
+
+#main{
+
+     #ContactBox {
+      background-color: darkcyan;
+    
+      // 標題
+      #ContactTitle {
+        // 外間距 margin:上間距無法將物件與父間距,顯示設定的距離,故改用內間距padding設定
+         padding: {
+              top: 15px;
+              bottom: 15px;
+
+        }
+       }
+      form {
+        // 寬度 左右留白
+        width: $W1 *9;
+        // 繼承 單獨為表單使用
+        %PI{
+            padding: {
+                top: 10px;
+                bottom: 10px;
+            };
+            list-style-type: none;
+            background-color: beige;
+        }
+        // 子元素選擇棄>
+        > div {
+             @extend %PI;
+         }
+          .E_mail {
+               @include Dn;
+          }
+       }
+     }
 }

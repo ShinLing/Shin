@@ -37,7 +37,7 @@ a:hover {
     font-weight: 650;
 }
 // 變數區
-$W10: 100%;
+$W10: 100vw;
 $Tpx: 16px;
 $Trem: 1rem;
 $Em: 1em;
@@ -98,7 +98,7 @@ $W10:$W10 / 10 * 10;
 @mixin LargeNav($multiple,$BtnNum){
     // 計算方式
     // 設定 寬度的基準值 5%
-    $W05: 5%;
+    $W05: 5vw;
     // 設定 代表 Logo寬度的變數 30% ;寬度的倍數
     $LogoWidth: $W05 *$multiple ;
     
