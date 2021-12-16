@@ -77,7 +77,6 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
     text-align: center;
     line-height: 65px;
     text-indent: -999999px;
-    background-image: url(../../imgs/icon/0001.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -110,7 +109,6 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
     float: left;
   }
   footer .HRLine {
-    margin-top: 15px;
     margin-bottom: 15px;
   }
   footer nav {
@@ -175,23 +173,31 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
     padding-bottom: 15px;
   }
   #main #ContactBox form {
-    width: 75vw;
+    width: 80%;
   }
   #main #ContactBox form > div {
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+  }
+  #main #ContactBox form > #NameBox > label, #main #ContactBox form #ContactBox > .Mail > label, #main #ContactBox form #ContactBox > .Ques > p, #main #ContactBox form .TextArea > li {
     margin-bottom: 10px;
   }
-  #main #ContactBox form > #NameBox > label, #main #ContactBox form > .Mail > label, #main #ContactBox form > .Ques > p, #main #ContactBox form .Text > li {
-    margin-bottom: 10px;
-  }
-  #main #ContactBox form > #NameBox > Input[type=text], #main #ContactBox form > .Mail > input {
-    width: 75%;
+  #main #ContactBox form > #NameBox > Input[type=text], #main #ContactBox form #ContactBox > .Mail > input {
+    width: 100%;
     height: 30px;
     font-size: 1.1rem;
     padding-left: 10px;
     color: honeydew;
     font-weight: 500;
+  }
+  #main #ContactBox form .FormBtn > input [type=submit], #main .FormBtn > input #ContactBox form [type=submit], #main #ContactBox form .FormBtn > input [type=reset], #main .FormBtn > input #ContactBox form [type=reset] {
+    width: 100px;
+    height: 35px;
+    font-size: 1.2rem;
+    color: white;
+    border: 0;
+    border-radius: 15px;
   }
   #main #ContactBox form > div {
     font-size: 1.3rem;
@@ -206,53 +212,59 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
   #main #ContactBox form > #NameBox > label {
     width: 100%;
   }
-  #main #ContactBox form > #NameBox > input[type=text]::-webkit-input-placeholder {
-    color: lightblue;
-    font-weight: 600;
-  }
-  #main #ContactBox form > #NameBox > input[type=text]:-ms-input-placeholder {
-    color: lightblue;
-    font-weight: 600;
-  }
-  #main #ContactBox form > #NameBox > input[type=text]::-ms-input-placeholder {
-    color: lightblue;
-    font-weight: 600;
-  }
-  #main #ContactBox form > #NameBox > input[type=text]::placeholder {
-    color: lightblue;
-    font-weight: 600;
-  }
-  #main #ContactBox form > .Mail {
+  #main #ContactBox > .Mail {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #main #ContactBox form > .Mail > label {
+  #main #ContactBox > .Mail > label {
     width: 100%;
   }
-  #main #ContactBox form > .Ques {
+  #main #ContactBox > .Ques {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #main #ContactBox form > .Ques > p {
+  #main #ContactBox > .Ques > p {
     width: 100%;
   }
-  #main #ContactBox form > li {
+  #main #ContactBox > li {
     width: 50%;
     margin-bottom: 15px;
   }
-  #main #ContactBox .Text > li {
+  #main .TextArea > li {
     width: 100%;
   }
-  #main #ContactBox .Text > textarea {
-    width: 95%;
+  #main .TextArea > textarea {
+    width: 100%;
+    font-size: 1.2rem;
   }
-  #main #ContactBox .E_mail2 {
+  #main .FormBtn {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #main .FormBtn margin {
+    bottom: 0;
+  }
+  #main .FormBtn > input [type=submit] {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    background-color: #cc5050;
+  }
+  #main .FormBtn > input [type=reset] {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background-color: #3b6097;
+  }
+  #main .E_mail2 {
     display: none;
   }
 }
@@ -456,63 +468,8 @@ footer nav #水彩作品 {
     width: 100vw;
     float: left;
   }
-  footer .HRLine {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  footer nav {
-    width: 80vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  footer #pohotoshop {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  footer .LeftLine {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  footer #illustrator {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  footer .RightLine {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-  }
-  footer #watercolor {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
-  }
-  footer address {
-    width: 40vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-  footer address .Line {
-    width: 20vw;
-    height: 30px;
-    background-image: url(../../imgs/icon/00002.svg);
-    text-indent: -999999px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  footer h6 {
-    text-align: center;
-    font-size: 0.8rem;
-    font-weight: 200;
-    background-color: chocolate;
+  #main > #ContactBox > form {
+    width: 45%;
   }
 }
 

@@ -100,56 +100,14 @@ header{
     }
   }
 footer {
-  .HRLine{
-  margin: {
-     top:15px;
-     bottom: 15px;
-  };
-  };
   nav {
-     width: $W1 * 8;
-     display: flex;
-
-  }
-   // 彈性布局order重新設定排列順序
-  #pohotoshop {
-  order: 3;
-  }
- .LeftLine {
-  order:2;
+  } 
  }
- #illustrator {
-  order: 1;
-  }
-  .RightLine {
-    order:4;
-  }
-  #watercolor {
-    order:5;
-  }
-  address{
-    width: $W1 * 4;
-   
-    display: flex;
-    // 上邊界nav與address的距離
-    margin: {
-      top: 10px;
-      bottom: 20px;
+
+ #main {
+   > #ContactBox {
+      >form {
+         width: $WPer * 4.5;
+      }
     }
-    .Line{
-      width: $W1 * 2;
-      height: 30px;
-      @include BG(icon,"00002.svg",contain)
-    }
-  }
- 
-  h6{
-    // 文字置中
-    text-align: center;
-    // 文字尺寸
-    font-size: $Trem * 0.8;
-    // 文字粗細
-    font-weight: 200;
-    background-color: chocolate;
-  }
-}
+ }
