@@ -136,7 +136,8 @@ header{
 footer {
   .HRLine{
   margin: {
-     top:15px;
+    // 減少空白
+    //  top:15px;
      bottom: 15px;
   };
   };
@@ -204,16 +205,17 @@ footer {
        }
       form {
         // 寬度 左右留白
-        width: $W1 *7.5;
+        width: $WPer * 8;
         // background-color: brown;
         // 繼承 單獨為表單使用
         %PI{
             padding: {
                 top: 10px;
-                bottom: 10px;
+                // 表單與頁尾之間的距離
+                bottom: 15px;
             };
            margin: {
-               bottom: 10px;
+               bottom: 5px;
            };
         }
         %TitlM {
@@ -222,7 +224,7 @@ footer {
            }
         }
         %InputInBox {
-          width: $WPer * 7.5;
+          width: $WPer * 10;
           height: 30px;
           font-size: $Trem * 1.1;
           // 內間距
@@ -235,11 +237,22 @@ footer {
           font-weight: 500
         }
         
+        %BtnSR {
+           width: 100px;
+           height: 35px;
+           font-size:  $Trem * 1.2;
+           color:white;
+            // 按鈕平面化,邊框線段為0
+            border: 0;
+            // 圓角
+            border-radius: 15px;
+        }
      
         // 子元素選擇器>
         > div {
              @extend %PI;
              font-size: $Trem * 1.3;
+
          }
 
          > #NameBox {
@@ -253,11 +266,11 @@ footer {
          >Input[type=text] {
            @extend %InputInBox;
         }
-        // 偽類別,使用者觀看到的樣式
+        // 偽元素,使用者觀看到的樣;表單統一設計樣式
         >input[type=text]::placeholder{
-          color: lightblue;
-         font-weight: 600;
-        }
+          // color: lightblue;
+          // font-weight: 600;
+           }
          }
          
          >.Mail {
@@ -293,15 +306,35 @@ footer {
             }
           }
          }
-         .Text {
+         .TextArea {
            > li {
               width:  $WPer * 10;
               @extend %TitlM;
            }
            > textarea {
-            width:  $WPer * 9.5;
+            width:  $WPer * 10;
+            font-size: $Trem *1.2;
            }
          }
+         .FormBtn {
+          width: $WPer * 10;
+          display: flex;
+          margin {
+            bottom: 0;
+          }
+
+          >input [type=submit]{
+            @extend %BtnSR;
+            order: 2; 
+            background-color: rgb(204, 80, 80);
+          }
+
+          >input [type=reset]{
+            @extend %BtnSR;
+            order:1;
+            background-color: rgb(59, 96, 151);
+            }
+          }
          .E_mail2 {
           @include DN;
            }
