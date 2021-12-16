@@ -70,7 +70,7 @@ header{
       // 將文字移至裝置之外
       text-indent: -999999px;
       // 背景圖片連結
-      // background-image: url(../../imgs/icon/0001.png);
+      background-image: url(../../imgs/icon/0001.png);
       // 背景圖片對齊(定位點)
       background-position: center;
       // 背景圖片取消重覆顯示
@@ -267,7 +267,9 @@ footer {
            @extend %InputInBox;
         }
         // 偽元素,使用者觀看到的樣;表單統一設計樣式
-        > input[type=text]::placeholder {}
+        > input[type=text]::placeholder {
+
+        }
           // color: lightblue;
           // font-weight: 600;
           }
@@ -335,7 +337,7 @@ footer {
             background-color: rgb(59, 96, 151);
             }
           }
-         .E_mail2 {
+        .E_mail2 {
          @include DN;
           }
        }
