@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <li id="TOP"> <a href="#Logo">TOP</a></li>
     <!-- 頁首 一頁式或多頁式 放共用性質資料 像素px(固定值) %(百分比,依螢幕尺寸計算) -->
     <header>
         <!-- 內容 導覽列(連結) :廣告區(圖片,輪播圖)-->
@@ -91,11 +92,12 @@
             </picture>
           </div>
             
-            <!--  -->
+          
 
            
         </div>
     </header>
+    
     <!-- 內容  一頁式用區塊區分內容 ARTICLE文章區塊 標題(h1-h6)-->
     <!-- IE瀏覽器,不支援main標籤,取代方式有兩種:方法一:將main改為區塊(div)標籤,然後利用ID選擇器命名:方法二:文章標籤(article) :若有多個相同標籤,請用ID選擇器(唯一)或是 類別選擇器(class)區分-->
     <article id="main">
@@ -114,7 +116,7 @@
     </article>
     <article>
         <h1 id="ProjectBox">專案設計</h1>
-    <a href="#Logo">TOP</a>
+    
     <article>
     <article id="ContactBox">
         <h1 id="ContactTitle">聯絡表單</h1>
@@ -142,7 +144,7 @@
          
          
          <!-- 行內標籤span不換行,用來強調或凸顯單獨的顏色 -->
-         <div class="E_mail2">電子信箱帳號</div>
+         <!-- <div class="E_mail2">電子信箱帳號</div>
          <span>@</span>
          <select name=" "id="">
              <option value="gmail.com"></option>
@@ -151,7 +153,7 @@
          </select>
         </label>
        </div>
-    
+     -->
         <!-- 換行 -->
         <br>
        
@@ -182,6 +184,9 @@
             <!-- 按鈕 -->
             <div class="FormBtn">
                 <input type="submit" value="送出資料">
+            </div>
+            <div class="FormBtn">
+                <input type="reset" value="重新輸入">
             </div>
         </form>
     </article>
