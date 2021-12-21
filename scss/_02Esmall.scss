@@ -136,7 +136,7 @@ header{
       // 垂直置中
       line-height:  80px;
       // 往中間設定
-      top: 195 / 576 *100%;
+      top: ((576 / 2 ) - (80 / 2 ))/ 576 *100%;
       display: flex;
 
       > .arrow {
@@ -169,21 +169,21 @@ header{
     }
    }
       
-    // .Box1{
-    // background-color: aliceblue
-    // }
-    // .Box2{
-    //   background-color: aqua
-    // }
-    // .Box3{
-    //   background-color: blueviolet
-    // }
-    // .Box4{
-    //   background-color: brown
-    // }
-    // .Box5{
-    //   background-color: coral
-    // }
+     .Box1{
+      background-color: aliceblue
+    }
+     .Box2{
+      background-color: aqua
+    }
+    .Box3{
+       background-color: blueviolet
+    }
+     .Box4{
+      background-color: brown
+    }
+     .Box5{
+       background-color: coral
+    }
     }
   
 footer {
