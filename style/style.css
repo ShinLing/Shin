@@ -100,6 +100,7 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
     overflow-x: auto;
     background-color: cadetblue;
     margin-top: 65px;
+    position: relative;
   }
   header #BannerBox > .Arrow {
     width: 100%;
@@ -108,7 +109,8 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
     font-size: 1.8rem;
     text-align: center;
     line-height: 80px;
-    top: 43.05556%;
+    top: 50%;
+    margin-top: -40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
