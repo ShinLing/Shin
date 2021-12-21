@@ -37,6 +37,8 @@ header{
       // 停佇在畫面上方,不隨著畫面滑動而消失
       position: fixed;
       top: 0;
+      // 設定層階
+      z-index:  999;
       background-color: lightpink;
 
     // 指向清單li
@@ -105,7 +107,7 @@ header{
     // 高度單位vh (裝置的可視高度)
     height: 100vh;
     position: absolute;
-    z-index: 10;
+    z-index: 9999;
     display: none;
     background-color: tan;
   }
@@ -121,26 +123,39 @@ header{
        top: $NH;
     }
     // 輪播圖左右按鈕
-    > .BtnBox {
+    > .Arrow {
       width: $WPer * 10;
       // 相對定位
       position: absolute;
       // 層級
-      z-index: 10;
+      z-index: 5;
       // 文字尺寸
       font-size:  $Trem * 1.8;
+      // 水平置中
+      text-align: center;
+      // 垂直置中
+      line-height:  80px;
+      // 往中間設定
+      top: 195 / 576 *100%;
       display: flex;
-      background-color: yellowgreen;
 
-      > .LefeBtn {
-        width:  $WPer * 0.7;
-        height:  60px;
-        background-color: wheat;
-
-        > .RightBtn {
-          width:  $WPer * 0.7;
-          height:  60px;
-          background-color: whitesmoke;
+      > .arrow {
+        width: $WPer * 0.6;
+        height: 80px;
+        // 圓角矩形
+        border-radius: 20px;
+        background-color: rgba( 255,255,255,0.3);
+      }
+  
+     
+      > .Larrow {
+      // 外間距靠左
+      margin-left: 10px;
+      }
+     
+      > .Rarrow {
+      // 外間距靠右
+      margin-right: 10px;
         }
       }
     } 
@@ -170,7 +185,7 @@ header{
     //   background-color: coral
     // }
     }
-  }
+  
 footer {
   .HRLine{
   margin: {
