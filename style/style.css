@@ -127,26 +127,82 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
   header #BannerBox > .Arrow > .Rarrow {
     margin-right: 10px;
   }
-  header .ImgBox {
+  .ImgBox {
     width: 500vw;
+    -webkit-animation: move 25s infinite;
+            animation: move 25s infinite;
   }
-  header .ImgBox .SmallImg {
+  .ImgBox .SmallImg {
     width: 100vw;
     float: left;
   }
-  header .Box1 {
+  @-webkit-keyframes move {
+    0%,
+    20% {
+      -webkit-transform: translateX(0vw);
+              transform: translateX(0vw);
+    }
+    25%,
+    40% {
+      -webkit-transform: translateX(-100vw);
+              transform: translateX(-100vw);
+    }
+    45%,
+    60% {
+      -webkit-transform: translateX(-200vw);
+              transform: translateX(-200vw);
+    }
+    65%,
+    80% {
+      -webkit-transform: translateX(-300vw);
+              transform: translateX(-300vw);
+    }
+    85%,
+    100% {
+      -webkit-transform: translateX(-400vw);
+              transform: translateX(-400vw);
+    }
+  }
+  @keyframes move {
+    0%,
+    20% {
+      -webkit-transform: translateX(0vw);
+              transform: translateX(0vw);
+    }
+    25%,
+    40% {
+      -webkit-transform: translateX(-100vw);
+              transform: translateX(-100vw);
+    }
+    45%,
+    60% {
+      -webkit-transform: translateX(-200vw);
+              transform: translateX(-200vw);
+    }
+    65%,
+    80% {
+      -webkit-transform: translateX(-300vw);
+              transform: translateX(-300vw);
+    }
+    85%,
+    100% {
+      -webkit-transform: translateX(-400vw);
+              transform: translateX(-400vw);
+    }
+  }
+  .Box1 {
     background-color: aliceblue;
   }
-  header .Box2 {
+  .Box2 {
     background-color: aqua;
   }
-  header .Box3 {
+  .Box3 {
     background-color: blueviolet;
   }
-  header .Box4 {
+  .Box4 {
     background-color: brown;
   }
-  header .Box5 {
+  .Box5 {
     background-color: coral;
   }
   footer .HRLine {

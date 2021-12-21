@@ -166,16 +166,43 @@ header{
         }
       }
     } 
+
+    
+    }
    
    .ImgBox {
     //  圖片框的寬度尺寸
     width: $W10 * 5;
+    // 呼叫動畫 動畫名稱 總秒數 播放次數(無限播放)
+    animation: move 25s infinite;
     .SmallImg{
     width: 100vw;
     float: left;
     }
    }
-      
+    // 動畫 1.設定關鍵影格 2.呼叫動畫
+    @keyframes move {
+      0%,
+      20% {
+          transform: translateX(0vw);
+      }
+      25%,
+      40% {
+          transform: translateX(-100vw);
+      }
+      45%,
+     60% {
+         transform: translateX(-200vw);
+     }
+      65%,
+      80% {
+        transform: translateX(-300vw);
+       }
+       85%,
+       100% {
+           transform: translateX(-400vw);
+       }
+      }
      .Box1{
       background-color: aliceblue
     }
@@ -191,7 +218,7 @@ header{
      .Box5{
        background-color: coral
     }
-    }
+    
   
 footer {
   .HRLine{
