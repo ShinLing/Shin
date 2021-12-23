@@ -15,7 +15,7 @@
     <header>
         <!-- 內容 導覽列(連結) :廣告區(圖片,輪播圖)-->
         <!-- 導覽列:pohotosop作品 illustrator作品 水彩作品 關於Shin 聯絡表單 -->
-        <nav>
+     <nav>
             <!-- 清單li -->
             <li id="Logo">
                 <a href="index.html">Shin 的個人工作室</a>
@@ -55,51 +55,73 @@
             </ul>
         </nav>
         <!-- 基本輪播圖片 1組為 5張圖 -->
-        <div id="BannerBox">
-           <ul class="BtnBox">
-               <li class="LeftBtn">&lt;</li>
-               <li class="RightBtn">&gt;</li>
-           </ul>
+        <!-- 按鈕表單物件 單選紐 check預選 -->
+        
+        <div class="RadioBox">
+             <input type="radio" name="control" id="Control_1" checked>
+             <input type="radio" name="control" id="Control_2">
+             <input type="radio" name="control" id="Control_3">
+             <input type="radio" name="control" id="Control_4">
+             <input type="radio" name="control" id="Control_5">
+            </div>
             <!-- 項目清單 ul li 廣告區 1920 X 600(電腦版 -->
             <!-- html5 新標籤 picture 必要配置標籤 source和 img (如果所有圖片都判讀不到,就會讀取img上的片)響應式圖片區塊:media的判斷,用 max-width最大寬度的設定-->
-            <!--將PICTURE  -->
+            <!--將PICTURE標籤當為一張圖片,裡面可以寫入不同尺寸的相同圖片  -->
 
+           <a href="javascript:;">
             <picture class="ImgBox01 SmallImg">
                 <source srcset="imgs/banner/s/banner01s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner01m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner01.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
+           </a>
+
+           <a href="javascript:;">
             <picture class="ImgBox02 SmallImg">
                 <source srcset="imgs/banner/s/banner02s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner02m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner02.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
+           </a>
+
+           <a href="javascript:;">
             <picture class="ImgBox03 SmallImg">
                 <source  srcset="imgs/banner/s/banner03s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner03m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner03.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
+           </a>
+
+           <a href="javascript:'">
             <picture class="ImgBox04 SmallImg">
                 <source srcset="imgs/banner/s/banner04s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner04m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner04.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
+           </a>
+
+           <a href="javascript:;">
             <picture class="ImgBox05 SmallImg">
                 <source srcset="imgs/banner/s/banner05s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner05m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner05.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
-          </div>
-            
-          
+           </a>
 
-           
+           <div class="Controls_Visible">
+            <label for="Control_1"></label>
+            <label for="Control_2"></label>
+            <label for="Control_3"></label>
+            <label for="Control_4"></label>
+            <label for="Control_5"></label>
         </div>
+    </div>
+        
     </header>
     
     <!-- 內容  一頁式用區塊區分內容 ARTICLE文章區塊 標題(h1-h6)-->

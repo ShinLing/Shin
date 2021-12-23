@@ -131,7 +131,7 @@ header{
       // 相對定位
       position: absolute;
       // 層級
-      z-index: 5;
+      z-index: 15;
       // 文字尺寸
       font-size:  $Trem * 1.8;
       // 水平置中
@@ -152,21 +152,31 @@ header{
         // 圓角矩形
         border-radius: 20px;
         background-color: rgba( 255,255,255,0.3);
+        // 定位點 停佇
+        position:  fixed;
       }
   
      
       > .Larrow {
-      // 外間距靠左
+      // 靠左 啟用 定位點停佇
+      left: 10px;
+      // 不啟用 定位點停佇
       margin-left: 10px;
       }
      
       > .Rarrow {
-      // 外間距靠右
+      // 靠右 啟用 定位點停佇
+      right: 10px;
+      // 不啟用 定位點停佇
       margin-right: 10px;
         }
       }
     } 
-
+    // 單選紐
+    > .RadioBox {
+      position: absolute;
+      z-index: 10;
+    }
     
     }
    
@@ -174,12 +184,36 @@ header{
     //  圖片框的寬度尺寸
     width: $W10 * 5;
     // 呼叫動畫 動畫名稱 總秒數 播放次數(無限播放)
-    animation: move 25s infinite;
-    .SmallImg{
+    animation: move 25s infinite alternate;
+    .SmallImg {
     width: 100vw;
     float: left;
     }
    }
+
+  //  控制按鈕
+  > .Controls_Visible {
+     position: absolute;
+     width: $W1 * 10;
+     text-align: center;
+     bottom: 12px;
+
+      label {
+        // 顯示方式 行內區塊
+        display: inline-block;
+        // 寬度與高度 同數值為正
+        width: 10px;
+        height: 10px;
+        // 物件的左右間距
+        margin: 0 5px;
+        // 背景顏色
+        background-color: white;
+        // 圓角 正圓
+        border-radius: 50%;
+        // 框線
+        border: 2px solid white;
+       }
+  }
     // 動畫 1.設定關鍵影格 2.呼叫動畫
     @keyframes move {
       0%,

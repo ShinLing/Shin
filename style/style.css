@@ -105,7 +105,7 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
   header #BannerBox > .Arrow {
     width: 100%;
     position: absolute;
-    z-index: 5;
+    z-index: 15;
     font-size: 1.8rem;
     text-align: center;
     line-height: 80px;
@@ -120,21 +120,43 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
     height: 80px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.3);
+    position: fixed;
   }
   header #BannerBox > .Arrow > .Larrow {
+    left: 10px;
     margin-left: 10px;
   }
   header #BannerBox > .Arrow > .Rarrow {
+    right: 10px;
     margin-right: 10px;
+  }
+  header > .RadioBox {
+    position: absolute;
+    z-index: 10;
   }
   .ImgBox {
     width: 500vw;
-    -webkit-animation: move 25s infinite;
-            animation: move 25s infinite;
+    -webkit-animation: move 25s infinite alternate;
+            animation: move 25s infinite alternate;
   }
   .ImgBox .SmallImg {
     width: 100vw;
     float: left;
+  }
+  > .Controls_Visible {
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    bottom: 12px;
+  }
+  > .Controls_Visible label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid white;
   }
   @-webkit-keyframes move {
     0%,
@@ -406,16 +428,47 @@ header nav .clear {
 
 header #Bannerbox {
   width: 100vw;
-  overflow-x: auto;
+  overflow-x: hidden;
   background-color: cadetblue;
   margin-top: 65px;
+  position: relative;
 }
 
-header #Bannerbox .ImgBox {
+header #Bannerbox > .Arrow {
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 120px;
+  top: 50%;
+  margin-top: -60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header #Bannerbox > .Arrow > .arrow {
+  width: 6%;
+  height: 80px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: fixed;
+}
+
+header #Bannerbox > .Arrow > .Larrow {
+  left: 10px;
+}
+
+header #Bannerbox > .Arrow > .Rarrow {
+  right: 10px;
+}
+
+.ImgBox {
   width: 500vw;
 }
 
-header #Bannerbox .ImgBox .SmallImg {
+.ImgBox .SmallImg {
   width: 100vw;
   float: left;
 }
@@ -467,11 +520,12 @@ footer nav #水彩作品 {
   header nav #Portfolio, header nav #About, header nav #Project, header nav #Connection {
     display: none;
   }
-  header #Bannerbox {
-    width: 100vw;
-    height: 280px;
-    overflow-x: auto;
-    background-color: cadetblue;
+  header #Bannerbox > .Arrow {
+    line-height: 140px;
+    margin-top: -70px;
+  }
+  header #Bannerbox > .Arrow > .arrow {
+    height: 140px;
   }
 }
 
@@ -520,9 +574,21 @@ footer nav #水彩作品 {
   }
   #Bannerbox {
     width: 100vw;
-    overflow-x: auto;
+    overflow-x: hidden;
     background-color: cadetblue;
     margin-top: 0;
+  }
+  #Bannerbox #Bannerbox > .Arrow {
+    line-height: 120px;
+    margin-top: -60px;
+  }
+  #Bannerbox #Bannerbox > .Arrow > .arrow {
+    width: 2.5%;
+    height: 120px;
+  }
+  #Bannerbox #Bannerbox > .ImgBox:hover {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
   }
   #main article {
     height: 1650px;
@@ -570,16 +636,16 @@ footer nav #水彩作品 {
   }
   header #BannerBox {
     width: 100vw;
-    height: 280px;
     overflow-x: auto;
     background-color: cadetblue;
   }
-  header #BannerBox picture {
-    width: 500vw;
+  header #BannerBox > .Arrow {
+    line-height: 120px;
+    margin-top: -60px;
   }
-  header #BannerBox picture .SmallImg {
-    width: 100vw;
-    float: left;
+  header #BannerBox > .Arrow > .arrow {
+    width: 2%;
+    height: 120px;
   }
   #main > #ContactBox > form {
     width: 45%;

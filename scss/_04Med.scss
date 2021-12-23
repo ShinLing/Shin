@@ -5,13 +5,8 @@
   color:white;
 }
     
-     header{
-        nav{ 
-        }
-      }        
-    
+      
   
-
   header{
     nav{
      $NH: 7vh;
@@ -47,18 +42,24 @@
     }
 
    #Bannerbox {
-     width: $W10;
-     height: $BHsmall;
-     overflow-x: auto;
-     background-color: cadetblue;
-     
-         }
+    > .Arrow {
+    
+      line-height:  140px;
+      margin: {
+         top: -70px;
+      }
+    
+      > .arrow {
+        height: 140px;
+        
+      }
      }
-   
-     
-
-footer {
-nav {
-  
    }
- }
+  }
+
+
+  footer {
+  nav { 
+
+    }
+  }
