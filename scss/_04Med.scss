@@ -5,8 +5,11 @@
   color:white;
 }
     
-      
-  
+    header{
+         nav{         
+    }
+  }
+
   header{
     nav{
      $NH: 7vh;
@@ -36,30 +39,29 @@
        clear:both;
      }
      #Portfolio, #About, #Project, #Connection {
-      //  @extend %Dn;
-      @include DN;
+       @extend %Dn;
       }
     }
 
    #Bannerbox {
-    > .Arrow {
-    
-      line-height:  140px;
-      margin: {
-         top: -70px;
-      }
-    
-      > .arrow {
-        height: 140px;
+     width: $W10;
+     height: $BHsmall;
+     overflow-x: auto;
+     background-color: cadetblue;
+     .ImgBox {
         
-      }
+         width: $W10 * 5 ;
+         .SmallImg {
+              width: 100vw;
+              float: left;
+         }
      }
+   
+     }
+}
+
+footer {
+ nav {
+  
    }
-  }
-
-
-  footer {
-  nav { 
-
-    }
-  }
+ }

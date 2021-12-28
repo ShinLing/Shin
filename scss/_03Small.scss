@@ -3,21 +3,13 @@
 // scss 繼承
 // scss 變數 要計算的值或者常變動的值 $
 
-#TOP {
-  @include DN;
-}
-
-header{
+  header{
        nav{
+        //  設定nav專用(區域)變數;vh單位(以裝置的高度*百分比計算,同時顯示框架的高度值)
         //  屬於 nav 寬度% ;高度 px ;背景色(暫)
-       width: $NW;
-        
-       // 停佇在畫面上方,不隨著畫面滑動而消失
-      position: fixed;
-      top: 0;
-      background-color: lightpink;
-
-        
+        $NH: 7vh;
+        height: $NH;
+        background-color: lightpink;
   
         // 指向清單li
         li{
@@ -70,130 +62,11 @@ header{
       //  vw(以裝置的寬為寬度) vh(以裝置的高為高度)
       #Bannerbox {
         width: $W10;
+        height: $BHsmall;
         // 超出範圍設定,能滑動x軸,讓圖片在框架中左右滑動
-        overflow-x: hidden;
+        overflow-x: auto;
         background-color: cadetblue;
-        
-        // 導覽列固定在上方,會形成浮動狀態,故廣告區的上方要用外間距設定為高度
-        margin : {
-          top: $NH;
-        }
-// 相對定位(移動物件的定位點)--重新定位
-position:  relative;
-
-// 輪播圖左右按鈕
-> .Arrow {
-  width: $WPer * 10;
-  // 相對定位
-  position: absolute;
-  // 層級
-  z-index: 5;
-  // 文字尺寸
-  font-size:  $Trem * 1.8;
-  // 水平置中
-  text-align: center;
-  // 垂直置中
-  line-height:  120px;
-  // 設定為50%的位置
-  top: 50%;
-  // 外間距
-  margin: {
-     top: -60px;
-  }
-  display: flex;
-
-  > .arrow {
-    width: $WPer * 0.6;
-    height: 80px;
-    // 圓角矩形
-    border-radius: 20px;
-    background-color: rgba( 255,255,255,0.3);
-    // 定位點 停佇
-    position:  fixed;
-  }
-
- 
-  > .Larrow {
-  // 靠左
-  left: 10px;
-  }
- 
-  > .Rarrow {
-  // 靠右
-  right: 10px;
-    }
-  }
-  // 輪播區 按鈕
-  > .RadioBox {
-    width: $WPer * 10;
-
-    > input {
-      @include DN;
-    }
- 
-   //  控制按鈕
-    > .Controls_Visible {
-    width:  $WPer * 10;;
-    position: absolute;
-    text-align: center;
-    bottom: 12px;
-
-    
-
-      > label {
-       // 顯示方式 行內區塊
-       display: inline-block;
-       // 寬度與高度 同數值為正
-       width: 10px;
-       height: 10px;
-       // 物件的左右間距
-       margin: 0 5px;
-       // 背景顏色
-       background-color: white;
-       // 圓角 正圓
-       border-radius: 50%;
-       // 框線
-       border: 2px solid white;
-      }
- }
-
-// 轉換控制按鈕顏色「~」連結同層元素,形成連動
-> input[type="radio"]:nth-of-type(1):checked
-   ~ .ImgBox
-   > a
-   > .SmallImg {
-   transform: translateX(0vw);
-   }
-> input[type="radio"]:nth-of-type(2):checked
-   ~ .ImgBox
-   > a
-   > .SmallImg {
-   transform: translateX(-100vw);
-   }
-> input[type="radio"]:nth-of-type(3):checked
-   ~ .ImgBox
-   > a
-   > .SmallImg {
-   transform: translateX(-200vw);
-   }
-> input[type="radio"]:nth-of-type(4):checked
-   ~ .ImgBox
-   > a
-   > .SmallImg {
-   transform: translateX(-300vw);
-   }
-> input[type="radio"]:nth-of-type(5):checked
-   ~ .ImgBox
-   > a
-   > .SmallImg {
-   transform: translateX(-400vw);
-   }  
-   }
-} 
-
-
-}
-  .ImgBox {
+        .ImgBox {
             // 圖片框的寬度尺寸
             width: $W10 * 5 ;
             .SmallImg {
@@ -216,8 +89,8 @@ position:  relative;
         // .Box5{
         //   background-color: coral
         // }
-        
-  
+        }
+  }
       
   footer {
     nav {

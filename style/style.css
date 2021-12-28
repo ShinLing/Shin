@@ -43,21 +43,22 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
 
 行距 文字,百分比的單位 em (子物件的設定值會疊加父物件的設定值)和rem(不受父物件的設定值影響)
  */
-  #TOP {
+  header nav #Portfolio, header nav #About, header nav #Project, header nav #Connection {
     display: none;
   }
+  footer nav #pohotoshop作品, footer nav #illustrator作品, footer nav #水彩作品 {
+    width: 50%;
+    color: white;
+  }
   header nav {
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    z-index: 999;
+    width: 100%;
     background-color: lightpink;
   }
   header nav li {
     float: left;
   }
   header nav #Logo {
-    width: 85vw;
+    width: 85%;
     font-size: 2rem;
     text-indent: 30px;
     text-align: center;
@@ -72,7 +73,7 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
     display: none;
   }
   header nav #Menu {
-    width: 15vw;
+    width: 15%;
     text-align: center;
     line-height: 65px;
     text-indent: -999999px;
@@ -88,150 +89,32 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
     display: none;
   }
   header #MobileNav {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: absolute;
-    z-index: 9999;
+    z-index: 10;
     display: none;
     background-color: tan;
   }
   header #BannerBox {
-    width: 100vw;
+    width: 100%;
+    height: 280px;
     overflow-x: auto;
     background-color: cadetblue;
-    margin-top: 65px;
-    position: relative;
   }
-  header #BannerBox > .Arrow {
-    width: 100%;
-    position: absolute;
-    z-index: 15;
-    font-size: 1.8rem;
-    text-align: center;
-    line-height: 80px;
-    top: 50%;
-    margin-top: -40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  header #BannerBox picture {
+    width: 500%;
   }
-  header #BannerBox > .Arrow > .arrow {
-    width: 6%;
-    height: 80px;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
-    position: fixed;
-  }
-  header #BannerBox > .Arrow > .Larrow {
-    left: 10px;
-    margin-left: 10px;
-  }
-  header #BannerBox > .Arrow > .Rarrow {
-    right: 10px;
-    margin-right: 10px;
-  }
-  header > .RadioBox {
-    position: absolute;
-    z-index: 10;
-  }
-  .ImgBox {
-    width: 500vw;
-    -webkit-animation: move 25s infinite alternate;
-            animation: move 25s infinite alternate;
-  }
-  .ImgBox .SmallImg {
+  header #BannerBox picture .SmallImg {
     width: 100vw;
     float: left;
   }
-  > .Controls_Visible {
-    position: absolute;
-    width: 100vw;
-    text-align: center;
-    bottom: 12px;
-  }
-  > .Controls_Visible label {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: white;
-    border-radius: 50%;
-    border: 2px solid white;
-  }
-  @-webkit-keyframes move {
-    0%,
-    20% {
-      -webkit-transform: translateX(0vw);
-              transform: translateX(0vw);
-    }
-    25%,
-    40% {
-      -webkit-transform: translateX(-100vw);
-              transform: translateX(-100vw);
-    }
-    45%,
-    60% {
-      -webkit-transform: translateX(-200vw);
-              transform: translateX(-200vw);
-    }
-    65%,
-    80% {
-      -webkit-transform: translateX(-300vw);
-              transform: translateX(-300vw);
-    }
-    85%,
-    100% {
-      -webkit-transform: translateX(-400vw);
-              transform: translateX(-400vw);
-    }
-  }
-  @keyframes move {
-    0%,
-    20% {
-      -webkit-transform: translateX(0vw);
-              transform: translateX(0vw);
-    }
-    25%,
-    40% {
-      -webkit-transform: translateX(-100vw);
-              transform: translateX(-100vw);
-    }
-    45%,
-    60% {
-      -webkit-transform: translateX(-200vw);
-              transform: translateX(-200vw);
-    }
-    65%,
-    80% {
-      -webkit-transform: translateX(-300vw);
-              transform: translateX(-300vw);
-    }
-    85%,
-    100% {
-      -webkit-transform: translateX(-400vw);
-              transform: translateX(-400vw);
-    }
-  }
-  .Box1 {
-    background-color: aliceblue;
-  }
-  .Box2 {
-    background-color: aqua;
-  }
-  .Box3 {
-    background-color: blueviolet;
-  }
-  .Box4 {
-    background-color: brown;
-  }
-  .Box5 {
-    background-color: coral;
-  }
   footer .HRLine {
+    margin-top: 15px;
     margin-bottom: 15px;
   }
   footer nav {
-    width: 80vw;
+    width: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -262,7 +145,7 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
             order: 5;
   }
   footer address {
-    width: 40vw;
+    width: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -270,7 +153,7 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
     margin-bottom: 20px;
   }
   footer address .Line {
-    width: 20vw;
+    width: 20%;
     height: 30px;
     background-image: url(../../imgs/icon/00002.svg);
     text-indent: -999999px;
@@ -284,118 +167,10 @@ header nav #Portfolio, header nav #About, header nav #Project, header nav #Conne
     font-weight: 200;
     background-color: chocolate;
   }
-  #main #ContactBox {
-    background-image: url(../../imgs/bg/w-08pla-1.gif);
-  }
-  #main #ContactBox #ContactTitle {
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  #main #ContactBox form {
-    width: 80%;
-  }
-  #main #ContactBox form > div {
-    padding-top: 10px;
-    padding-bottom: 15px;
-    margin-bottom: 5px;
-  }
-  #main #ContactBox form > #NameBox > label, #main #ContactBox form #ContactBox > .Mail > label, #main #ContactBox form #ContactBox > .Ques > p, #main #ContactBox form .TextArea > li {
-    margin-bottom: 10px;
-  }
-  #main #ContactBox form > #NameBox > Input[type=text], #main #ContactBox form #ContactBox > .Mail > input {
-    width: 100%;
-    height: 30px;
-    font-size: 1.1rem;
-    padding-left: 10px;
-    color: honeydew;
-    font-weight: 500;
-  }
-  #main #ContactBox form .FormBtn > input [type=submit], #main .FormBtn > input #ContactBox form [type=submit], #main #ContactBox form .FormBtn > input [type=reset], #main .FormBtn > input #ContactBox form [type=reset] {
-    width: 100px;
-    height: 35px;
-    font-size: 1.2rem;
-    color: white;
-    border: 0;
-    border-radius: 15px;
-  }
-  #main #ContactBox form > div {
-    font-size: 1.3rem;
-  }
-  #main #ContactBox form > #NameBox {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  #main #ContactBox form > #NameBox > label {
-    width: 100%;
-  }
-  #main #ContactBox > .Mail {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  #main #ContactBox > .Mail > label {
-    width: 100%;
-  }
-  #main #ContactBox > .Ques {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  #main #ContactBox > .Ques > p {
-    width: 100%;
-  }
-  #main #ContactBox > li {
-    width: 50%;
-    margin-bottom: 15px;
-  }
-  #main .TextArea > li {
-    width: 100%;
-  }
-  #main .TextArea > textarea {
-    width: 100%;
-    font-size: 1.2rem;
-  }
-  #main .FormBtn {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  #main .FormBtn margin {
-    bottom: 0;
-  }
-  #main .FormBtn > input [type=submit] {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    background-color: #cc5050;
-  }
-  #main .FormBtn > input [type=reset] {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    background-color: #3b6097;
-  }
-  #main .E_mail2 {
-    display: none;
-  }
-}
-
-#TOP {
-  display: none;
 }
 
 header nav {
-  width: 100vw;
-  position: fixed;
-  top: 0;
+  height: 7vh;
   background-color: lightpink;
 }
 
@@ -404,17 +179,17 @@ header nav li {
 }
 
 header nav #Logo {
-  width: 90vw;
+  width: 90%;
   font-size: 2rem;
   text-indent: 30px;
-  line-height: 65px;
+  line-height: 7vh;
   background-color: darkgrey;
 }
 
 header nav #Menu {
-  width: 10vw;
+  width: 10%;
   text-align: center;
-  line-height: 65px;
+  line-height: 7vh;
   text-indent: -999999px;
   background-image: url(../../imgs/icon/0001.png);
   background-position: center;
@@ -427,49 +202,19 @@ header nav .clear {
 }
 
 header #Bannerbox {
-  width: 100vw;
-  overflow-x: hidden;
-  background-color: cadetblue;
-  margin-top: 65px;
-  position: relative;
-}
-
-header #Bannerbox > .Arrow {
   width: 100%;
-  position: absolute;
-  z-index: 5;
-  font-size: 1.8rem;
-  text-align: center;
-  line-height: 120px;
-  top: 50%;
-  margin-top: -60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: 280px;
+  overflow-x: auto;
+  background-color: cadetblue;
 }
 
-header #Bannerbox > .Arrow > .arrow {
-  width: 6%;
-  height: 80px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.3);
-  position: fixed;
+header #Bannerbox ul {
+  width: 500%;
 }
 
-header #Bannerbox > .Arrow > .Larrow {
-  left: 10px;
-}
-
-header #Bannerbox > .Arrow > .Rarrow {
-  right: 10px;
-}
-
-.ImgBox {
-  width: 500vw;
-}
-
-.ImgBox .SmallImg {
+header #Bannerbox ul li {
   width: 100vw;
+  height: 280px;
   float: left;
 }
 
@@ -490,70 +235,21 @@ footer nav #水彩作品 {
     width: 50%;
     color: white;
   }
-  header nav {
-    height: 7vh;
-    background-color: lightpink;
-  }
-  header nav li {
-    float: left;
-  }
-  header nav #Logo {
-    width: 90vw;
-    font-size: 2rem;
-    text-indent: 30px;
-    line-height: 7vh;
-    background-color: darkgrey;
-  }
-  header nav #Menu {
-    width: 10vw;
-    text-align: center;
-    line-height: 7vh;
-    text-indent: -999999px;
-    background-image: url(../../imgs/icon/0001.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  header nav .clear {
-    clear: both;
-  }
-  header nav #Portfolio, header nav #About, header nav #Project, header nav #Connection {
-    display: none;
-  }
-  header #Bannerbox > .Arrow {
-    line-height: 140px;
-    margin-top: -70px;
-  }
-  header #Bannerbox > .Arrow > .arrow {
-    height: 140px;
-  }
 }
 
 @media screen and (min-width: 992px) {
-  #TOP {
-    display: none;
-    position: absolute;
-    z-index: 20;
-    width: 60px;
-    height: 60px;
-    background-color: wheat;
-    position: fixed;
-    bottom: 50px;
-    right: 0;
-  }
   header nav {
-    width: 100vw;
+    width: 100%;
     background-color: lightpink;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: unset;
   }
   header nav #Logo {
-    width: 30vw;
+    width: 30%;
   }
   header nav li {
-    width: 17.5vw;
+    width: 17.5%;
   }
   header nav #Logo {
     text-align: center;
@@ -572,83 +268,31 @@ footer nav #水彩作品 {
   header nav #MENU {
     display: none;
   }
-  #Bannerbox {
-    width: 100vw;
-    overflow-x: hidden;
+  header #Bannerbox {
+    width: 100%;
+    overflow-x: auto;
     background-color: cadetblue;
-    margin-top: 0;
   }
-  #Bannerbox #Bannerbox > .Arrow {
-    line-height: 120px;
-    margin-top: -60px;
+  header #Bannerbox ul {
+    width: 500%;
   }
-  #Bannerbox #Bannerbox > .Arrow > .arrow {
-    width: 2.5%;
-    height: 120px;
+  header #Bannerbox ul li {
+    width: 100vw;
+    float: left;
   }
-  #Bannerbox #Bannerbox > .ImgBox:hover {
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-  }
-  #main article {
-    height: 1650px;
+  header #main article {
+    width: 100%;
+    height: 650px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: cornflowerblue;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  header nav {
-    width: 100vw;
-    background-color: lightpink;
-  }
-  header nav li {
-    float: left;
-  }
-  header nav #Logo {
-    width: 85vw;
-    font-size: 2rem;
-    text-indent: 30px;
-    text-align: center;
-    line-height: 65px;
-    background-image: url(../../imgs/icon/0001.png);
-    text-indent: -999999px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  header nav #portfolio, header nav #About, header nav #Project, header nav #Contact {
-    display: none;
-  }
-  header nav #Menu {
-    width: 15vw;
-    text-align: center;
-    line-height: 65px;
-    text-indent: -999999px;
-    background-image: url(../../imgs/icon/0001.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  header nav .clear {
-    clear: both;
-  }
-  header nav #Portfolio, header nav #About, header nav #Project, header nav #Connection {
-    display: none;
-  }
-  header #BannerBox {
-    width: 100vw;
-    overflow-x: auto;
-    background-color: cadetblue;
-  }
-  header #BannerBox > .Arrow {
-    line-height: 120px;
-    margin-top: -60px;
-  }
-  header #BannerBox > .Arrow > .arrow {
-    width: 2%;
-    height: 120px;
-  }
-  #main > #ContactBox > form {
-    width: 45%;
+  #main {
+    width: 90%;
+    background-color: magenta;
   }
 }
 

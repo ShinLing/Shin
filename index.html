@@ -10,15 +10,14 @@
 </head>
 
 <body>
-    <li id="TOP"> <a href="#Logo">TOP</a></li>
     <!-- 頁首 一頁式或多頁式 放共用性質資料 像素px(固定值) %(百分比,依螢幕尺寸計算) -->
     <header>
         <!-- 內容 導覽列(連結) :廣告區(圖片,輪播圖)-->
         <!-- 導覽列:pohotosop作品 illustrator作品 水彩作品 關於Shin 聯絡表單 -->
-     <nav>
+        <nav>
             <!-- 清單li -->
             <li id="Logo">
-                <a href="index.html">Shin 的個人工作室</a>
+                <a href="index.html">Shin的個人工作室</a>
             </li>
             <li id="Portfolio">
                 <a href="PortfolioBox">作品分享</a>
@@ -56,89 +55,47 @@
         </nav>
         <!-- 基本輪播圖片 1組為 5張圖 -->
         <div id="BannerBox">
-            <!-- 左右按鈕 -->
-            <ul class="Arrow">
-
-            </ul>
-        </div>
-        <!-- 按鈕表單物件 單選紐 check預選 -->
-    
-        <div class="RadioBox">
-             <input type="radio" name="control" id="Control_1" checked>
-             <input type="radio" name="control" id="Control_2">
-             <input type="radio" name="control" id="Control_3">
-             <input type="radio" name="control" id="Control_4">
-             <input type="radio" name="control" id="Control_5">
-
-             <!-- 項目清單 UL LI 輪播圖片 超小與小裝置(左右輪播) -->
-             <div class="ImgBox">
+          <div class="ImgBox"><!-- 項目清單 ul li 廣告區 1920 X 600(電腦版 -->
             <!-- html5 新標籤 picture 必要配置標籤 source和 img (如果所有圖片都判讀不到,就會讀取img上的片)響應式圖片區塊:media的判斷,用 max-width最大寬度的設定-->
-            <!--將PICTURE標籤當為一張圖片,裡面可以寫入不同尺寸的相同圖片  -->
-              <picture class="ImgBox01 SmallImg">
-              </picture>
-             </div>
+            <!--將PICTURE  -->
 
-             <div class="Controls_Visible">
-                <label for="Control_1"></label>
-                <label for="Control_2"></label>
-                <label for="Control_3"></label>
-                <label for="Control_4"></label>
-                <label for="Control_5"></label>
-            </div>
-        </div>
-            </div>
-            <!-- 項目清單 ul li 廣告區 1920 X 600(電腦版 -->
-            
-
-           <a href="javascript:;">
             <picture class="ImgBox01 SmallImg">
-                <source srcset="imgs/banner/s/banner01s.jpg" media="(max-width:767px )">
+                <source class="SmallImg" srcset="imgs/banner/s/banner01s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner01m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner01.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
-           </a>
-
-           <a href="javascript:;">
             <picture class="ImgBox02 SmallImg">
-                <source srcset="imgs/banner/s/banner02s.jpg" media="(max-width:767px )">
+                <source class="SmallImg" srcset="imgs/banner/s/banner02s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner02m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner02.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
-           </a>
-
-           <a href="javascript:;">
             <picture class="ImgBox03 SmallImg">
-                <source  srcset="imgs/banner/s/banner03s.jpg" media="(max-width:767px )">
+                <source class="SmallImg" srcset="imgs/banner/s/banner03s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner03m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner03.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
-           </a>
-
-           <a href="javascript:'">
             <picture class="ImgBox04 SmallImg">
-                <source srcset="imgs/banner/s/banner04s.jpg" media="(max-width:767px )">
+                <source class="SmallImg" srcset="imgs/banner/s/banner04s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner04m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner04.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
-           </a>
-
-           <a href="javascript:;">
             <picture class="ImgBox05 SmallImg">
-                <source srcset="imgs/banner/s/banner05s.jpg" media="(max-width:767px )">
+                <source class="SmallImg" srcset="imgs/banner/s/banner05s.jpg" media="(max-width:767px )">
                 <source srcset="imgs/banner/m/banner05m.jpg" media="(max-width:1023px )">
                 <source srcset="imgs/banner/banner05.jpg" media="(max-width:1024px )">
                 <img src="imgs/icon/camera.svg" alt="">
             </picture>
-           </a>
+          </div>
+            
+            <!--  -->
 
            
-        
+        </div>
     </header>
-    
     <!-- 內容  一頁式用區塊區分內容 ARTICLE文章區塊 標題(h1-h6)-->
     <!-- IE瀏覽器,不支援main標籤,取代方式有兩種:方法一:將main改為區塊(div)標籤,然後利用ID選擇器命名:方法二:文章標籤(article) :若有多個相同標籤,請用ID選擇器(唯一)或是 類別選擇器(class)區分-->
     <article id="main">
@@ -150,16 +107,17 @@
         <h1 id="IllustratorBox">illustrator作品</h1>
     </article>
     <article>
-        <h1 id="WatercolorBox">watercolor作品</h1>
+        <h1 id="WatercolorBox">water color作品</h1>
     </article>
     <article>
         <h1 id="AboutBox">關於Shin</h1>
     </article>
     <article>
         <h1 id="ProjectBox">專案設計</h1>
+    </article>
+    <a href="#Logo">TOP</a>
     <article>
-    <article id="ContactBox">
-        <h1 id="ContactTitle">聯絡表單</h1>
+        <h1 id="ContactBox">聯絡表單</h1>
         <!-- 表單form,實際用途是傳輸資料用,將資料寫入資料庫或由資料庫讀出修改 -->
         <!-- get傳輸不重要的資料,資料會顯示在網址上;post傳輸重要的資料,直接會加密的方式傳輸 -->
         <form action="" method="get">
@@ -168,65 +126,25 @@
             <!-- name 欄位名稱,對應資料庫的欄位名稱:命名:不能用中文,開頭不能為數字 -->
             <!-- 指定初始值 value:使用者需刪除內容,才可以填入資料 -->
             <!-- readonly 唯獨不可以更改內容:由資料庫導入資料時設定,可利用 javascript判斷開啟功能 -->
-        
-        <!-- 必填 required ,指定最多能輸入多少字 :maxlengh ,指定最少輸入多少字: mixlengh -->
-         <div id="NameBox">
-        <label for="UserName">姓名 </label>
-        <input type="text" name="" id="UserName" placeholder="請輸入中文姓名" required minlength="2" maxlength="6">
-       </div>
-        <div class="Mail">
-        <label for="E_mail">電子信箱</label>
-        <input type="email" name="" id="E_mail" required placeholder="輸入電子信箱帳號" >
 
-        <!-- label沒有換行功能 ;目前樣式表無法控制 label標籤,故用li作為外框-->
-            
-         <!-- 單行文字<,讓使用者自行輸入帳號;@固定出現;信箱用下拉是選單讓使用者挑選 -->
-         
-         
-         <!-- 行內標籤span不換行,用來強調或凸顯單獨的顏色 -->
-         <!-- <div class="E_mail2">電子信箱帳號</div>
-         <span>@</span>
-         <select name=" "id="">
-             <option value="gmail.com"></option>
-             <option value="yahoo.com.tw"></option>
-             <option value="hotmail.com"></option>
-         </select>
-        </label>
-       </div>
-     -->
-        <!-- 換行 -->
-        <br>
-       
-        
-       
-        <!-- 詢問問題 -->
-        <div class="Ques">
-            <p>詢問問題</p>
-            <!-- 單選紐radio 送出資料為同一群組,name的名稱要相同;寫入資料庫的值為value的內容-->
             <li>
-                <input type="radio" name="Question" id="" value="pohotoshop作品">pohotoshop作品
+                <label for="UserName">姓名:</label>
+                <input type="text" name="" id="UserName" value="請輸入中文姓名" required minlength="2" maxlength="6">
             </li>
-            <li>
-                <input type="radio" name="Question" id="" value="illustrator作品">illustrator作品
-            </li>
-            <li>
-                <input type="radio" name="Question" id="" value="watercolor作品">watercolor作品
-            </li>
-           </div>
-        </li>
+            <label for="E_mail">
+                電子信箱
+                <input type="email" name="" id="E_mail" required placeholder="輸入可以接收到的電子信箱">
+            </label>
             <!-- 多行文字 textarea: placeholder 輸入的提示訊息,輸入資料時會自動消失 -->
-            <div class="TextArea">
-            <li><label for="">詳細內容</label></li>
-
+            <label for="">
+                詳細內容
                 <textarea name="" id="" cols="30" rows="10" placeholder="請輸入問題內容,限制100個字,最少10個字" maxlength="100"
-                    minlength="10"></textarea>  
-        </div>
+                    minlength="10">
+</textarea>
+            </label>
             <!-- 按鈕 -->
             <div class="FormBtn">
                 <input type="submit" value="送出資料">
-            </div>
-            <div class="FormBtn">
-                <input type="reset" value="重新輸入">
             </div>
         </form>
     </article>
@@ -252,7 +170,7 @@
         </address>
         <h6>
             <!-- 年份 公司名稱 -->
-            公司網站全部圖文係屬公司版權所有 &COPY; 2021 <span>2022</span>
+            公司網站全部圖文係屬公司版權所有 &COPY; 2021
         </h6>
     </footer>
 </body>

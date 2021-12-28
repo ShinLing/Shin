@@ -37,16 +37,15 @@ a:hover {
     font-weight: 650;
 }
 // 變數區
-$W10: 100vw;
+$W10: 100%;
 $Tpx: 16px;
 $Trem: 1rem;
 $Em: 1em;
-$WPer: 10%;
 
-$NW: $W10; // 導覽列的寬
-$NH: 65px; // 導覽列的高
-
-
+$NW: $W10;
+// 導覽列的寬
+$NH: 65px;
+// 導覽列的高
 // 輪播圖
 $BHsmall: 280px; // 超小與小裝置
 
@@ -69,7 +68,7 @@ $W10:$W10 / 10 * 10;
 }
 
 // mixin 混合函式
-@mixin DN {
+@mixin Dn {
     display: none;
 }
 
@@ -99,7 +98,7 @@ $W10:$W10 / 10 * 10;
 @mixin LargeNav($multiple,$BtnNum){
     // 計算方式
     // 設定 寬度的基準值 5%
-    $W05: 5vw;
+    $W05: 5%;
     // 設定 代表 Logo寬度的變數 30% ;寬度的倍數
     $LogoWidth: $W05 *$multiple ;
     
