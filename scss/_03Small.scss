@@ -1,15 +1,19 @@
-// scss巢狀語法:呼叫元素選擇器(標籤選擇器)
-// 轉換後為 後代選擇器 header nav #Portfolio
-// scss 繼承
-// scss 變數 要計算的值或者常變動的值 $
+// 有需要這尺寸的裝置,在寫樣式語法
+#TOP {
+  @include DN;
+}
+header{
+  nav{
+     // 停佇在畫面上方,不隨著畫面滑動而消失
+     position: fixed;
+     top: 0;
+     
+     background-color: lightpink;
 
-  header{
-       nav{
-        //  設定nav專用(區域)變數;vh單位(以裝置的高度*百分比計算,同時顯示框架的高度值)
-        //  屬於 nav 寬度% ;高度 px ;背景色(暫)
-        $NH: 7vh;
-        height: $NH;
-        background-color: lightpink;
+      //  設定nav專用(區域)變數;vh單位(以裝置的高度*百分比計算,同時顯示框架的高度值)
+      //  屬於 nav 寬度% ;高度 px ;背景色(暫)
+      height: $NH;
+      background-color: lightpink;
   
         // 指向清單li
         li{
@@ -58,53 +62,138 @@
           @extend %Dn;
          }
        }
-      //  輪播圖片 超小與小裝置  100% X 375px
+      //  輪播圖片 超小與小裝置  100% X 280px(圖片以大尺寸1920*600為基礎計算)
       //  vw(以裝置的寬為寬度) vh(以裝置的高為高度)
       #Bannerbox {
         width: $W10;
-        height: $BHsmall;
         // 超出範圍設定,能滑動x軸,讓圖片在框架中左右滑動
-        overflow-x: auto;
+        overflow-x: hidden;
         background-color: cadetblue;
-        .ImgBox {
-            // 圖片框的寬度尺寸
-            width: $W10 * 5 ;
-            .SmallImg {
-                 width: 100vw;
-                 float: left;
-            }
+
+        //  導覽固定在上方,會形成浮動狀態,故廣告區上方要用 外間距設定為高度
+        margin: {
+            top: $NH;
         }
-        // .Box1{
-        // background-color: aliceblue
-        // }
-        // .Box2{
-        //   background-color: aqua
-        // }
-        // .Box3{
-        //   background-color: blueviolet
-        // }
-        // .Box4{
-        //   background-color: brown
-        // }
-        // .Box5{
-        //   background-color: coral
-        // }
+        // 相對定位(移動物件的定位點)--重新定位
+    position: relative;
+
+    // 輪播圖左右按鈕
+    > .Arrow {
+        width: $WPer * 10;
+        // 相對定位
+        position: absolute;
+        // 層級
+        z-index: 5;
+        // 文字尺寸
+        font-size: $Trem * 1.8;
+        // 水平置中
+        text-align: center;
+        // 垂直置中
+        line-height: 120px;
+        // 設定為50% 位置
+        top: 50%;
+        // 外間距
+        margin: {
+            top: -60px;
+        }
+        display: flex;
+
+        > .arrow {
+          width: $WPer * 0.5;
+          height: 120px;
+          // 圓角矩形
+          border-radius: 20px;
+          background-color: rgb(54, 46, 46);
+          // 定位點 停佇
+          position: fixed;
+        }
+
+        > .Larrow {
+          // 靠左
+          left: 10px;
+        }
+
+        > .Rarrow {
+          // 靠右
+          right: 10px;
+        }
+    }
+
+     // 輪播區 按鈕
+     > .RadioBox {
+      width: $WPer * 10;
+      
+      > input {
+         @include DN;
+     }
+
+     // 控制按鈕
+     > .Controls_Visible {
+         width: $WPer * 10;
+         position: absolute;
+         text-align: center;
+         bottom: 12px;
+
+         > label {
+         // 顯示方式 行內區塊
+         display: inline-block;
+         //  寬度與高度 同數值為正
+         width: 10px;
+         height: 10px;
+         // 物件的左右間距
+         margin: 0 5px;
+         // 背景顏色
+         background-color: wheat;
+         // 圓角 正圓
+         border-radius:  50%;
+         // 框線
+         border: 2px solid white; 
+         }
+     }
+
+    // 轉換控制按鈕顏色「~」連結同層元素,形成連動
+    > input[type="radio"]:nth-of-type(1):checked
+        ~ .ImgBox
+        > a
+        > .SmallImg {
+         transform: translateX(0vw)
+        }
+    > input[type="radio"]:nth-of-type(2):checked
+        ~ .ImgBox
+        > a
+        > .SmallImg {
+         transform: translateX(-100vw)
+        }
+    > input[type="radio"]:nth-of-type(3):checked
+        ~ .ImgBox
+        > a
+        > .SmallImg {
+        transform: translateX(-200vw)
+        }
+    > input[type="radio"]:nth-of-type(4):checked
+        ~ .ImgBox
+        > a
+        > .SmallImg {
+        transform: translateX(-300vw)
+        } 
+    > input[type="radio"]:nth-of-type(5):checked
+        ~ .ImgBox
+        > a
+        > .SmallImg {
+        transform: translateX(-4000vw)
+        }
+        
+
+ }
+    
         }
   }
       
   footer {
-    nav {
-      #pohotoshop作品 {
-        @extend %subnav;
-        background-color: bisque;
+     .HrlINE {
+      //  上邊界與下邊界,讓main 與 footer 有點區隔
+      margin: {
+        // top: 15px;
       }
-      #illustrator作品 {
-        @extend %subnav;
-        background-color: aquamarine;
-      }
-      #水彩作品 {
-        @extend %subnav;
-        background-color: cadetblue;
-      }
-    }
+     }
   } 

@@ -1,46 +1,37 @@
-// 設定頁面與物件邊界為0(沒有空白),設定水平置中,物件與物件邊界為0(沒有空白)
-// 管理所有物件 最大階層
-/*
-網頁使用的單位
-寬度 高度 行距 文字 物件的距離(外間距與內間距),只要能計算的質都有單位
-基礎單位 像素(PX)
-響應是網頁的單位 百分比(%) vw 與 vh(裝置可視的寬度與高度,新單位)
+// scss朝狀語法;呼叫元素選擇器(標籤選擇器)
+// 轉譯後為 後代選擇器 header nav #Portfolio{...}
+// scss繼承
+// scss變數 要計算的或常變動的值 $
 
-1.百分比(%)的缺點,高度無法顯示
-2.vw 與vh的缺點,舊瀏覽器IE不支援;MAC瀏覽器(safari),因為手機板需要扣除瀏覽器自帶功能的按鈕(在畫面的下方)
-
-行距 文字,百分比的單位 em (子物件的設定值會疊加父物件的設定值)和rem(不受父物件的設定值影響)
- */
-
-// 繼承區
-%Dn {
-// 不顯示
-display: none;
+#TOP {
+    @include Dn;
 }
-%subnav{
-  // 寬度 與文字顏色 頁尾次選單
-  width: 50%;
-  color:white;
-}
-
+   
 header{
     nav{
-    //  設定nav專用(區域)變數;vh單位(以裝置的高度*百分比計算,同時顯示框架的高度值)
-    //  屬於 nav 寬度% ;高度 px ;背景色(暫)
-    width: $NW;
-    // height: $NH;
-    background-color: lightpink;
+      //  屬於 nav 寬度% ;高度 px ;背景色(暫)
+      width: $NW;
+      // 設定 手機版的導覽列 63行,定位點與階層語法,被 nav 的高度設定給抵消,所以才隱藏 nav 的高度
+      // height: $NH;
+
+      // 停佇在畫面上方,不隨著畫面滑動而消失
+      position: fixed;
+      top: 0;
+      // 設定階層
+      z-index: 999;
+      
+      background-color: lightpink;
 
     // 指向清單li
     li{
-      // 將logo與選單設定為垂直排列(一列)float
+      // 將 logo 與 選單 設定為 垂直排列 (一列 )float
       // float(浮點對齊)缺點,會自動往上一階層(新圖層),所以,父框架(外框架),若沒有設定高度,系統將會視為不存在
       float: left;
     }
     // 商標
     #Logo{
       // 寬度8.5等份
-      width: $W1 * 8 + 5%;
+      width: $W8 + 5vw;
       // 文字尺寸,內縮,水平置中
       font-size: $Trem * 2;
       // 內縮:方法1,首行縮排(單行文字)
@@ -51,7 +42,7 @@ header{
       text-align: center;
       line-height: $NH;
       // 自行輸入所需的值
-      @include BG(icon,"0001.png",contain);
+      
     }
 
     // 導覽列:只顯示Logo和Mene,其餘不顯示
@@ -70,7 +61,7 @@ header{
       // 將文字移至裝置之外
       text-indent: -999999px;
       // 背景圖片連結
-      background-image: url(../../imgs/icon/0001.png);
+      // background-image: url(../../imgs/icon/0001.png);
       // 背景圖片對齊(定位點)
       background-position: center;
       // 背景圖片取消重覆顯示
@@ -83,86 +74,204 @@ header{
       clear:both;
     }
 
-    
     #Portfolio, #About, #Project, #Connection {
       @include Dn;
       }
     }
-  //  輪播圖片 超小與小裝置  100% X 375px
+    
+    // 手機版的導覽列
+    #MobileNav {
+        width: $W1 * 10;
+        // 高度單位 vh (裝置的可視高度)
+        height: 100vh;
+        // 定位點 絕對定位 設定階層
+        position: absolute;
+        z-index:  9999;
+        display: none;
+        background-color: rgb(151, 60, 116);
+    }
+
+  //  輪播圖片 超小與小裝置  100% X 280px(圖片以大尺寸1920*600為基礎計算)
   //  vw(以裝置的寬為寬度) vh(以裝置的高為高度)
-
-  // 手機的導覽列
-  #MobileNav{
-    width: $W1 *10;
-    // 高度單位vh (裝置的可視高度)
-    height: 100vh;
-    position: absolute;
-    z-index: 10;
-    display: none;
-    background-color: tan;
-  }
   #BannerBox {
-    width: $W10;
-    height: $BHsmall;
-    // 超出範圍設定,能滑動x軸,讓圖片在框架中左右滑動
-    overflow-x: auto;
-    background-color: cadetblue;
-   picture{
-    //  圖片框的寬度尺寸
-    width: $W10 * 5;
-    .SmallImg{
-    width: 100vw;
-    float: left;
-    }
-   }
-      
-    // .Box1{
-    // background-color: aliceblue
-    // }
-    // .Box2{
-    //   background-color: aqua
-    // }
-    // .Box3{
-    //   background-color: blueviolet
-    // }
-    // .Box4{
-    //   background-color: brown
-    // }
-    // .Box5{
-    //   background-color: coral
-    // }
-    }
-  }
-footer {
-  .HRLine{
-  margin: {
-     top:15px;
-     bottom: 15px;
-  };
-  };
-  nav {
-     width: $W1 * 8;
-     display: flex;
+     width: $W10;
+     // 因為,框架高度會由圖片帶出,所以不用設定高度
+     // 超出範圍設定,能滑動x軸,讓圖片在框架中左右滑動
+     overflow-x: auto;
+     background-color: rgb(75, 192, 95);
 
+    //  導覽固定在上方,會形成浮動狀態,故廣告區上方要用 外間距設定為高度
+    margin: {
+        top: $NH;
+    }
+
+    // 相對定位(移動物件的定位點)--重新定位
+    position: relative;
   }
-   // 彈性布局order重新設定排列順序
-  #pohotoshop {
-  order: 3;
+
+    // 輪播圖左右按鈕
+    > .Arrow {
+        width: $WPer * 10;
+        // 相對定位
+        position: absolute;
+        // 層級
+        z-index: 15;
+        // 文字尺寸
+        font-size: $Trem * 1.8;
+        // 水平置中
+        text-align: center;
+        // 垂直置中
+        line-height: 80px;
+        // 設定為50% 位置
+        top: 50%;
+        // 外間距
+        margin: {
+            top: -40px;
+        }
+        display: flex;
+
+        > .arrow {
+          width: $WPer * 0.6;
+          height: 80px;
+          // 圓角矩形
+          border-radius: 20px;
+          background-color: rgb(54, 46, 46);
+          // 定位點 停佇
+          position: fixed;
+        }
+
+        > .Larrow {
+          // 靠左 啟用 定位點停佇
+          left: 10px;
+          // 不啟用 定位點停佇
+          margin-left: 10px;
+        }
+
+        > .Rarrow {
+          // 靠右 啟用 定位點停佇
+          right: 10px;
+          // 不啟用 定位點停佇
+          margin-right: 10px;
+        }
+    }
+
+    // 輪播區 按鈕
+    > .RadioBox {
+         width: $WPer * 10;
+         
+         > input {
+            @include DN;
+        }
+
+        // 控制按鈕
+        > .Controls_Visible {
+            width: $WPer * 10;
+            position: absolute;
+            text-align: center;
+            bottom: 12px;
+
+            > label {
+            // 顯示方式 行內區塊
+            display: inline-block;
+            //  寬度與高度 同數值為正
+            width: 10px;
+            height: 10px;
+            // 物件的左右間距
+            margin: 0 5px;
+            // 背景顏色
+            background-color: wheat;
+            // 圓角 正圓
+            border-radius:  50%;
+            // 框線
+            border: 2px solid white; 
+            }
+        }
+
+       // 轉換控制按鈕顏色「~」連結同層元素,形成連動
+       > input[type="radio"]:nth-of-type(1):checked
+           ~ .ImgBox
+           > a
+           > .SmallImg {
+            transform: translateX(0vw)
+           }
+       > input[type="radio"]:nth-of-type(2):checked
+           ~ .ImgBox
+           > a
+           > .SmallImg {
+            transform: translateX(-100vw)
+           }
+       > input[type="radio"]:nth-of-type(3):checked
+           ~ .ImgBox
+           > a
+           > .SmallImg {
+           transform: translateX(-200vw)
+           }
+       > input[type="radio"]:nth-of-type(4):checked
+           ~ .ImgBox
+           > a
+           > .SmallImg {
+           transform: translateX(-300vw)
+           } 
+       > input[type="radio"]:nth-of-type(5):checked
+           ~ .ImgBox
+           > a
+           > .SmallImg {
+           transform: translateX(-4000vw)
+           }
+           
+
+    }
+
+    .ImgBox {
+      //  圖片框的寬度尺寸
+      width: $W10 * 5;
+      // 呼叫動畫 動畫名稱 總秒數 播放次數 (無限播放) 反向播放
+      animation: move 25s infinite alternate;
+      .SmallImg{
+          width: 100vw;
+          float: left;
+      }
+      > .SmallImg:hover {
+        animation-play-state: paused;
+      }
+
+    }
+  
   }
- .LeftLine {
-  order:2;
- }
- #illustrator {
-  order: 1;
-  }
-  .RightLine {
-    order:4;
-  }
-  #watercolor {
-    order:5;
-  }
-  address{
-    width: $W1 * 4;
+  
+footer {
+    .HRLine{
+        // 上邊界與下邊界,讓main與footer有點區隔
+        margin: {
+        // 減少空白
+        // top:15px;
+        bottom: 15px;
+        }
+    }
+    nav {
+        width: $W1 * 8;
+        // 彈性布局 設定方式:設定在要排列物件的父框架
+        display: flex;
+
+        // 彈性布局order重新設定排列順序
+        #pohotoshop {
+        order: 3;
+        }
+        .LeftLine {
+        order:2;
+        }
+        #illustrator {
+        order: 1;
+        }
+        .RightLine {
+        order:4;
+        }
+        #watercolor {
+        order:5;
+        }
+    }
+        address{
+        width: $W1 * 4;
    
     display: flex;
     // 上邊界nav與address的距離
@@ -173,7 +282,7 @@ footer {
     .Line{
       width: $W1 * 2;
       height: 30px;
-      @include BG(icon,"00002.svg",contain)
+      @include BG(icon,"00002.svg",contain);
     }
   }
  
@@ -185,5 +294,163 @@ footer {
     // 文字粗細
     font-weight: 200;
     background-color: chocolate;
+  }
+}
+
+#main {
+   
+  #ContactBox {
+      background-image: url(../imgs/bg/300.jfif);
+
+    // 標題
+    #ContactTitle {
+      // 外間距margin；上間距無法將物件與父框架 顯示設定的距離,故改用 內間距 padding設定
+      padding: {
+         top: 15px;
+         botttom: 15px;
+      }
+    }
+
+    form {
+    // 寬度 左右留白
+    width: $W1 * 8;
+    // background-color: coral;
+    // 繼承 單獨為表單使用
+    %PI {
+        padding: {
+            top: 10px;
+            // 表單與頁尾之間的距離
+            bottom: 15px;
+        }
+        margin: {
+            bottom: 5px;
+        }
+    }
+    %TitlM {
+        margin: {
+            bottom: 10px;
+        }
+    }
+
+    %InputInBox {
+        width: $WPer * 10;
+        height: 30px;
+        font-size: $Trem * 1.1;
+        // 內間距
+        padding: {
+            left: 10px;
+        }
+
+        // 使用者輸入時,呈現的樣式
+        color: brown;
+        // 文字粗細
+        font-weight: 500;
+    }
+
+    %BtnSR {
+        width: 100px;
+        height: 35px;
+        font-size: $Trem * 1.2;
+        color: white;
+        //按鈕平面化,邊框線段為0
+        border: 0;
+        // 圓角
+        border-radius: 15px;
+    }
+    }
+
+    // 子元素選擇器 >
+    > div {
+       @extend %PI;
+       font-size: $Trem * 1.3;
+    }
+
+    > #NameBox {
+      // 彈性布局
+      display: flex;
+      flex-wrap: wrap;
+      > label {
+          width: $W1 * 10;
+          @extend %TitlM;
+      }
+      > input[type=text] {
+          @extend %InputInBox;
+      }
+      // 偽元素,使用者觀看到的樣式;表單統一設計樣式
+      > input[type=text]::placeholder{
+        // color: brown;
+        // font-weight: 600;
+      }
+    }
+
+    > .Mail {
+      display: flex;
+      flex-wrap: wrap;
+      > label {
+          width: $WPer * 10;
+          @extend %TitlM;
+      }
+      > input {
+          @extend %InputInBox;
+      }
+    }
+
+    >.Ques {
+      // 彈性布局
+      display: flex;
+      // 換行
+      flex-wrap: wrap;
+
+      > p {
+        // 寬度
+        width: $WPer * 10;
+        // 外間距
+        @extend %TitlmM;
+      }
+      > li {
+          // 寬度
+          width:  $WPer * 5;
+          margin: {
+             bottom: 15px;
+          }
+      }    
+    }
+
+    > .TextArea {
+      > li {
+        width: $WPer * 10;
+        @extend %TitlM;
+      }
+      > textarea {
+        width: $WPer * 10;
+        font-size: 1.2;
+      }
+    }
+    
+    > .FormBtn {
+        width: $WPer * 10;
+        display: flex;
+        margin: {
+             bottom: 0;
+        }
+
+        > input[type=submit] {
+            @extend %BtnSR;
+            order: 2;
+            background-color: rgb(235, 82, 44);
+        }
+
+        > input[type=reset] {
+            @extend %BtnSR;
+            order: 1;
+            background-color: rgb(62, 61, 165);
+        }
+      
+    
+
+    .E_mail2 {
+      @include DN;
+    }
+    }
   }
 }

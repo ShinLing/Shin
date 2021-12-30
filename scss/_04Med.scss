@@ -5,10 +5,7 @@
   color:white;
 }
     
-    header{
-         nav{         
-    }
-  }
+   
 
   header{
     nav{
@@ -40,26 +37,24 @@
      }
      #Portfolio, #About, #Project, #Connection {
        @extend %Dn;
+      
+     //  輪播圖片 超小與小裝置  100% X 280px(圖片以大尺寸1920*600為基礎計算)
+      //  vw(以裝置的寬為寬度) vh(以裝置的高為高度)
+     #Bannerbox {
+      //  讀取03的資料
+      > .Arrow {
+        line-height: 140px;
+        margin: {
+          top: -70px;
+        }
+        > .arrow {
+           height: 140px;
+        }
       }
     }
-
-   #Bannerbox {
-     width: $W10;
-     height: $BHsmall;
-     overflow-x: auto;
-     background-color: cadetblue;
-     .ImgBox {
-        
-         width: $W10 * 5 ;
-         .SmallImg {
-              width: 100vw;
-              float: left;
-         }
-     }
-   
-     }
+  }
 }
-
+  }
 footer {
  nav {
   
