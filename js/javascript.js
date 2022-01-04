@@ -95,12 +95,87 @@ function cal(){
          let z = x+Y;
     }
     // 測試可用 控制台 呼叫
-    console.log("c=", C);
-    console.log("Z=", Z);
+    console.log("c=", c);
+    console.log("Z=", z);
 
     // var 的全域與區域的作用,只存在 fonction (函數)之內
     // {區塊敘述} if、else、for、while
     // 判斷式 if {} else {}
 
-    document.getElementById('TestBox')
-  
+    document.getElementById('TestBox').textContent="1234";
+
+    // 確認對話框'提示訊息'
+    window.confirm('繼續請按確定,退出請按取消');
+
+    // 條件分支 if(條件){成立時執行的動作}else{不成立執行的動作}
+    // 如果沒有「不成立」時要執行的動作,可以省略else不寫
+    // 方法
+    function WinCon(){
+        if(window.confirm('繼續請按確定,退出請按取消')){
+            // 控制台訊息
+            console.log('確定');
+            document.getElementById('TestBox').textContent = "確定";
+        }else {
+            console.log('已取消');
+            document.getElementById('TestBox').textContent = "已取消";
+        }
+    }
+
+
+    // 輸入對話框 window.prompt('提示訊息')
+
+    //  window.prompt('請輸入資料')
+
+    // 帳密登入邏輯
+    // 1.設定變數,只依靠 window.prompt的一個輸入框,故只設定一個變數即可
+    // 2.判斷式 變數值 與 輸入值 比對(==);相同才會顯示資料;比對(==),只要輸入的資料相同即可通過
+    
+    // 全域變數
+    let TestName = document.getElementById('TestBox');
+
+    // 全域變數需設定在方法之上,不然會呼叫不到
+
+    // 呼叫方法
+    login();
+
+
+    // 方法
+    function login() {
+     
+        // 區域變數
+        let Ans = window.prompt('請輸入帳號');
+        let Number;
+
+        if( Ans == 'Shin') {
+            // console.log(Ans);
+            Number = window.prompt('請輸入密碼');
+
+            if( Number == '12345') {
+                TestName.textContent="歡迎進入系統";
+            }
+        
+        } else {
+        Ans = "帳號密碼輸入錯誤!"
+        // console.log(Ans);
+        TestName.textContent = Ans;
+        }
+    }
+    TimeItem();
+    // 按照時間顯示不同訊息
+    function TimeItem() {
+
+        // 區域變數 時間 (時)
+        let hour = new Date().getHours();
+
+        // 判斷式 1.早上 9點 和 (或)(||) 下午 3點,顯示 「現在買1送1喔!」
+        // 2.晚上 7點之後到 (&&) 晚上9點前,顯示「所有商品7折,特價品除外~」
+        // 3.其他時間顯示「歡迎團購商品!」
+
+        if (hour == 9|| hour ==15 ) {
+            TestName.textContent = "現在買1送1喔!";
+        } else if (hour >=19 && hour <21) {
+            TestName.textContent ="所有商品7折,特價品除外~";
+        } else {
+            TestName.textContent ="歡迎團購商品!";
+        }
+    }
