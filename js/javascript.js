@@ -101,4 +101,6 @@ function cal(){
     // var 的全域與區域的作用,只存在 fonction (函數)之內
     // {區塊敘述} if、else、for、while
     // 判斷式 if {} else {}
+
+    document.getElementById('TestBox')
   

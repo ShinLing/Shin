@@ -54,7 +54,7 @@ header{
     // 選單
     #Menu{
       // 寬度 1.5 等份
-      width: $W1 + 5%;
+      width: $W1 + 5vw;
       // 文字水平(行距).垂直(文字對齊--置中)置中
       text-align: center;
       line-height: $NH;
@@ -160,7 +160,7 @@ header{
          width: $WPer * 10;
          
          > input {
-            @include DN;
+            @include Dn;
         }
 
         // 控制按鈕
@@ -300,7 +300,7 @@ footer {
 #main {
    
   #ContactBox {
-      background-image: url(../imgs/bg/300.jfif);
+      // background-image: url(../imgs/bg/300.jfif);
 
     // 標題
     #ContactTitle {
@@ -449,7 +449,7 @@ footer {
     
 
     .E_mail2 {
-      @include DN;
+      @include Dn;
     }
     }
   }

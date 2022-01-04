@@ -1,6 +1,6 @@
 // 有需要這尺寸的裝置,在寫樣式語法
 #TOP {
-  @include DN;
+  @include Dn;
 }
 header{
   nav{
@@ -124,7 +124,7 @@ header{
       width: $WPer * 10;
       
       > input {
-         @include DN;
+         @include Dn;
      }
 
      // 控制按鈕
